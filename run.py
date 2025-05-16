@@ -67,6 +67,7 @@ def create_windows_shortcut():
         python_bin = get_venv_python()
         print("pywin32 no encontrado, instalando...")
         subprocess.check_call([python_bin, "-m", "pip", "install", "pywin32"])
+        subprocess.check_call([sys.executable, "-m", "pywin32_postinstall", "-install"])
         import pythoncom
         from win32com.shell import shell, shellcon
         from win32com.client import Dispatch
