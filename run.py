@@ -64,13 +64,25 @@ def create_windows_shortcut():
         from win32com.shell import shell, shellcon
         from win32com.client import Dispatch
     except ImportError:
-        python_bin = get_venv_python()
         print("pywin32 no encontrado, instalando...")
-        subprocess.check_call([python_bin, "-m", "pip", "install", "pywin32"])
-        subprocess.check_call([sys.executable, "-m", "pywin32_postinstall", "-install"])
-        import pythoncom
-        from win32com.shell import shell, shellcon
-        from win32com.client import Dispatch
+        venv_python = get_venv_python()
+        subprocess.check_call([venv_python, "-m", "pip", "install", "pywin32"])
+
+        # 🔥 WORKAROUND para Python 3.12+: forzar path pywin32_system32
+        pywin32_path = os.path.join(os.path.dirname(venv_python), "Lib", "site-packages", "pywin32_system32")
+        if pywin32_path not in os.environ["PATH"]:
+            os.environ["PATH"] = pywin32_path + os.pathsep + os.environ["PATH"]
+            sys.path.append(pywin32_path)
+
+        # Reintentar importación
+        try:
+            import pythoncom
+            from win32com.shell import shell, shellcon
+            from win32com.client import Dispatch
+        except ImportError as e:
+            print("No se pudo importar pywin32 después de la instalación.")
+            print(f"Error: {e}")
+            return False
 
     desktop = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
     shortcut_path = os.path.join(desktop, "AutoClicker.lnk")
@@ -86,7 +98,7 @@ def create_windows_shortcut():
     shell_link.TargetPath = bat_path
     shell_link.WorkingDirectory = working_dir
     shell_link.IconLocation = os.path.abspath("icon.ico")
-    shell_link.WindowStyle = 7  # Minimizada
+    shell_link.WindowStyle = 7  # Minimized
     shell_link.Save()
 
     print(f"Shortcut created at {shortcut_path}")
@@ -122,7 +134,6 @@ Terminal=false
     print(f"Shortcut created at {shortcut_path}")
     return True
 
-
 def create_shortcut():
     if os.name == "nt":
         return create_windows_shortcut()
@@ -134,9 +145,7 @@ def main():
     root = tk.Tk()
     root.withdraw()
 
-    # Ruta al icono .ico para Windows
     icon_path_win = os.path.abspath("icon.ico")
-    # Ruta al icono .png para otros SO
     icon_path_png = os.path.abspath("icon.png")
 
     try:
@@ -155,8 +164,7 @@ def main():
                    "Continue?")
             if not messagebox.askyesno("Create Virtual Environment", msg):
                 sys.exit(1)
-            success = create_virtualenv()
-            if not success:
+            if not create_virtualenv():
                 messagebox.showerror("Error", "Failed to create virtual environment.")
                 sys.exit(1)
 
@@ -178,8 +186,7 @@ def main():
     if missing_modules:
         msg = f"The following required modules are missing:\n\n{', '.join(missing_modules)}\n\nWould you like to install them now?"
         if messagebox.askyesno("Missing Dependencies", msg):
-            success = install_missing_modules(missing_modules)
-            if not success:
+            if not install_missing_modules(missing_modules):
                 messagebox.showerror("Installation Failed",
                                      "Failed to install required modules manually, please use pip.")
                 sys.exit(1)
