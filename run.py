@@ -143,7 +143,7 @@ def create_linux_shortcut():
     content = f"""[Desktop Entry]
 Type=Application
 Name=AutoClicker
-Exec={python_path} {script_path}
+Exec=pkexec {python_path} {script_path}
 Icon={icon_path}
 Terminal=false
 """
