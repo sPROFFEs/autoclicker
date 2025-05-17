@@ -180,7 +180,7 @@ def main():
     # First, ensure we're in the virtual environment
     if not is_running_in_venv():
         print("Not running in virtual environment...")
-        
+
         if not os.path.isdir(VENV_DIR):
             msg = ("No virtual environment found.\n\n"
                    "The application will create one now and install dependencies.\n\n"
@@ -198,12 +198,11 @@ def main():
         # We need to restart in the virtual environment
         messagebox.showinfo("Restarting", "Restarting application inside virtual environment.")
         restart_in_venv()
-        # This point should never be reached because restart_in_venv uses os.execv
         sys.exit(0)
 
     # Now we're running in the virtual environment
     print("Running in virtual environment...")
-    
+
     # Check for necessary modules first
     missing_modules = check_required_modules()
     if missing_modules:
@@ -211,14 +210,14 @@ def main():
         if messagebox.askyesno("Missing Dependencies", msg):
             if not install_missing_modules(missing_modules):
                 messagebox.showerror("Installation Failed",
-                                    "Failed to install required modules manually, please use pip.")
+                                     "Failed to install required modules manually, please use pip.")
                 sys.exit(1)
             else:
                 messagebox.showinfo("Installation Successful", "Modules installed successfully. Restarting...")
                 os.execv(sys.executable, [sys.executable] + sys.argv)
         else:
             sys.exit(1)
-            
+
     # Check if pywin32 is required and install it if needed (Windows only)
     if os.name == "nt":
         try:
@@ -228,35 +227,51 @@ def main():
             print("pywin32 is not installed. Installing...")
             try:
                 subprocess.check_call([sys.executable, "-m", "pip", "install", "pywin32"])
-                messagebox.showinfo("Module Installed", 
-                                  "pywin32 was installed. The application will now restart.")
+                messagebox.showinfo("Module Installed",
+                                    "pywin32 was installed. The application will now restart.")
                 os.execv(sys.executable, [sys.executable] + sys.argv)
             except Exception as e:
                 print(f"Error installing pywin32: {e}")
                 messagebox.showerror("Installation Error", f"Failed to install pywin32: {e}")
                 sys.exit(1)
 
-    # Try to create shortcut (only show dialog if we're in the venv)
-    if messagebox.askyesno("Create Shortcut", "Would you like to create a desktop shortcut?"):
+    # Check if shortcut already exists before asking
+    shortcut_exists = False
+    if os.name == "nt":
         try:
-            print("Attempting to create desktop shortcut...")
-            created = create_shortcut()
-            if created:
-                messagebox.showinfo("Shortcut Created", "A desktop shortcut has been created for you.")
-            else:
-                print("Shortcut was not created or already existed.")
+            from win32com.shell import shell, shellcon
+            desktop = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
+            shortcut_path = os.path.join(desktop, "AutoClicker.lnk")
+            shortcut_exists = os.path.exists(shortcut_path)
         except Exception as e:
-            error_msg = f"Failed to create shortcut: {e}\n{traceback.format_exc()}"
-            print(error_msg)
-            messagebox.showerror("Shortcut Creation Error", error_msg)
+            print(f"Error checking shortcut existence: {e}")
+    elif os.name == "posix":
+        desktop = os.path.join(os.path.expanduser("~"), "Desktop")
+        shortcut_path = os.path.join(desktop, "AutoClicker.desktop")
+        shortcut_exists = os.path.exists(shortcut_path)
+
+    if not shortcut_exists:
+        if messagebox.askyesno("Create Shortcut", "Would you like to create a desktop shortcut?"):
+            try:
+                print("Attempting to create desktop shortcut...")
+                created = create_shortcut()
+                if created:
+                    messagebox.showinfo("Shortcut Created", "A desktop shortcut has been created for you.")
+                else:
+                    print("Shortcut was not created or already existed.")
+            except Exception as e:
+                error_msg = f"Failed to create shortcut: {e}\n{traceback.format_exc()}"
+                print(error_msg)
+                messagebox.showerror("Shortcut Creation Error", error_msg)
+    else:
+        print("Shortcut already exists. Skipping creation prompt.")
 
     # Continue with the main application
     root.deiconify()
 
     try:
         from main import AutoClickerApp, Recorder, Player
-        
-        # Show success message if everything loaded correctly
+
         print("Successfully loaded all modules and components")
 
         app = AutoClickerApp(root)
@@ -274,6 +289,7 @@ def main():
         messagebox.showerror("Application Error", f"An unexpected error occurred:\n\n{e}\n\n{err}")
         print(err)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
