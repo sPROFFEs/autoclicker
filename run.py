@@ -5,6 +5,7 @@ import subprocess
 import tkinter as tk
 from tkinter import messagebox
 import traceback
+import platform
 
 from utils import check_required_modules, install_missing_modules
 
@@ -26,7 +27,14 @@ def install_deps_in_venv():
     python_bin = get_venv_python()
     try:
         subprocess.check_call([python_bin, "-m", "pip", "install", "--upgrade", "pip"])
-        modules = ['pyautogui', 'keyboard', 'Pillow', 'pynput', 'pywin32']
+        
+        # Dependencias base
+        modules = ['pyautogui', 'keyboard', 'Pillow', 'pynput']
+        
+        # Solo en Windows se incluye pywin32
+        if platform.system() == "Windows":
+            modules.append('pywin32')
+
         subprocess.check_call([python_bin, "-m", "pip", "install"] + modules)
         return True
     except Exception as e:
