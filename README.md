@@ -16,13 +16,13 @@ The latest installers for **Windows** and **Linux** are available in the [Releas
 
 1. Download the Windows installer (`PyclickRecorder_Windows_installer.exe`) from the [Releases](https://github.com/sPROFFEs/autoclicker/releases/download/1.0/PyclickRecorder_Windows_installer.exe).
 2. Run the installer and follow the on-screen instructions.
-3. Make sure to select to set the python path permanently on the installation wizard. (You can check the installation [demo video](videos/windows_installation.mp4) for reference)
+3. Make sure to select to set the python path permanently on the installation wizard. (You can check the installation [demo video]([videos/windows_installation.mp4](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/videos/windows_installation.mp4)) for reference)
 3. After installing python, it should automatically open the app folder.
 4. Just launch the file `run.py` by double-clicking it.
 5. It should creat all the required files and folders, once all dependencies are installed the app will start but with a terminal window open.
 6. You can close the app and launch it again form the desktop shortcut, it will automatically open the app without the terminal window.
 
-[▶️ Watch demo video](videos/windows_installation.mp4)
+[▶️ Watch demo video]([videos/windows_installation.mp4](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/videos/windows_installation.mp4))
 
 ---
 
@@ -53,7 +53,7 @@ The latest installers for **Windows** and **Linux** are available in the [Releas
 
 6. Launch the application from the created Desktop shortcut. If the shortcut does not appear, check the `~/Desktop` directory or your system's default desktop folder.
 
-[▶️ Watch demo video](videos/linux_installation.mp4)
+[▶️ Watch demo video]([videos/linux_installation.mp4](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/videos/linux_installation.mp4))
 
 ---
 
@@ -83,4 +83,4 @@ The app is still in development and may have some bugs.
 
 Do not trust any external source for any information regarding this project or providing installation methods.
 
-If you dont trust the behaviour of the app, feel free to check the code and report any issues. Also you can check the [windows installer](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/instalador.iss) and [linux installer](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/PyclickeRecorder_Linux_installer.sh) scripts to see how the app is installed.
+If you dont trust the behaviour of the app, feel free to check the code and report any issues. Also you can check the [windows installer]([https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/instalador.iss](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/installers/windows_installer.iss)) and [linux installer]([https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/PyclickeRecorder_Linux_installer.sh](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/installers/PyclickeRecorder_Linux_installer.sh)) scripts to see how the app is installed.
