@@ -26,7 +26,7 @@ def install_deps_in_venv():
     python_bin = get_venv_python()
     try:
         subprocess.check_call([python_bin, "-m", "pip", "install", "--upgrade", "pip"])
-        modules = ['pyautogui', 'keyboard', 'Pillow', 'pynput']
+        modules = ['pyautogui', 'keyboard', 'Pillow', 'pynput', 'pywin32']
         subprocess.check_call([python_bin, "-m", "pip", "install"] + modules)
         return True
     except Exception as e:
@@ -48,6 +48,17 @@ def create_launcher_bat():
     venv_pythonw = os.path.abspath(os.path.join(VENV_DIR, "Scripts", "pythonw.exe"))
     script_path = os.path.abspath("run.py")
 
+    # Print debugging info
+    print(f"Creating batch file with:")
+    print(f"- pythonw path: {venv_pythonw}")
+    print(f"- script path: {script_path}")
+    
+    if not os.path.exists(venv_pythonw):
+        print(f"WARNING: pythonw not found at {venv_pythonw}")
+        # Try fallback to python.exe if pythonw.exe doesn't exist
+        venv_pythonw = os.path.abspath(os.path.join(VENV_DIR, "Scripts", "python.exe"))
+        print(f"Falling back to: {venv_pythonw}")
+
     bat_content = f'''@echo off
 start "" "{venv_pythonw}" "{script_path}"
 exit
@@ -56,48 +67,55 @@ exit
     with open(bat_path, "w") as f:
         f.write(bat_content)
 
+    print(f"Batch file created at: {bat_path}")
     return bat_path
 
-def import_or_install(module_name, package_name=None):
-    package_name = package_name or module_name
-    try:
-        module = __import__(module_name)
-        return module
-    except ImportError:
-        print(f"{module_name} no encontrado, instalando {package_name}...")
-        python_bin = get_venv_python()
-        subprocess.check_call([python_bin, "-m", "pip", "install", package_name])
-        print(f"{package_name} instalado. Reiniciando script para aplicar cambios...")
-        os.execv(python_bin, [python_bin] + sys.argv)
-
-
 def create_windows_shortcut():
-    # Intentamos importar pywin32 y sus componentes, o instalarlos si no existen
-    pythoncom = import_or_install("pythoncom", "pywin32")
-    from win32com.shell import shell, shellcon
-    from win32com.client import Dispatch
+    """Create a Windows shortcut on the desktop"""
+    try:
+        # Import the win32com modules directly - they should already be installed at this point
+        import win32com.client
+        from win32com.shell import shell, shellcon
+        
+        # Get desktop path
+        desktop = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
+        shortcut_path = os.path.join(desktop, "AutoClicker.lnk")
+        
+        # Show what we're doing
+        print(f"Creating shortcut at: {shortcut_path}")
 
-    desktop = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
-    shortcut_path = os.path.join(desktop, "AutoClicker.lnk")
+        if os.path.exists(shortcut_path):
+            print("Shortcut already exists, skipping creation.")
+            return False
 
-    if os.path.exists(shortcut_path):
-        print("Shortcut already exists, skipping creation.")
+        # Create bat file first
+        bat_path = create_launcher_bat()
+        working_dir = os.path.abspath(".")
+        
+        # Check if icon exists
+        icon_path = os.path.abspath("icon.ico") 
+        if not os.path.exists(icon_path):
+            print(f"Warning: Icon file {icon_path} not found.")
+            icon_path = ""  # Use default icon if file doesn't exist
+
+        # Create shortcut
+        shell_object = win32com.client.Dispatch("WScript.Shell")
+        shortcut = shell_object.CreateShortcut(shortcut_path)
+        shortcut.TargetPath = bat_path
+        shortcut.WorkingDirectory = working_dir
+        if icon_path:
+            shortcut.IconLocation = icon_path
+        shortcut.WindowStyle = 7  # Minimized
+        shortcut.Description = "AutoClicker launcher"
+        shortcut.Save()
+
+        print(f"Shortcut successfully created at {shortcut_path}")
+        return True
+    except Exception as e:
+        error_msg = f"Error creating shortcut: {e}\n{traceback.format_exc()}"
+        print(error_msg)
+        messagebox.showerror("Shortcut Creation Error", error_msg)
         return False
-
-    bat_path = create_launcher_bat()
-    working_dir = os.path.abspath(".")
-
-    shell_link = Dispatch("WScript.Shell").CreateShortcut(shortcut_path)
-    shell_link.TargetPath = bat_path
-    shell_link.WorkingDirectory = working_dir
-    shell_link.IconLocation = os.path.abspath("icon.ico")
-    shell_link.WindowStyle = 7  # Minimized
-    shell_link.Description = "AutoClicker launcher"
-    shell_link.Save()
-
-    print(f"Shortcut created at {shortcut_path}")
-    return True
-
 
 def create_linux_shortcut():
     desktop = os.path.join(os.path.expanduser("~"), "Desktop")
@@ -143,16 +161,26 @@ def main():
     icon_path_win = os.path.abspath("icon.ico")
     icon_path_png = os.path.abspath("icon.png")
 
+    # Check if icon files exist and provide debug information
+    if os.name == 'nt':
+        if not os.path.exists(icon_path_win):
+            print(f"Warning: Windows icon file not found: {icon_path_win}")
+    if not os.path.exists(icon_path_png):
+        print(f"Warning: PNG icon file not found: {icon_path_png}")
+
     try:
-        if os.name == 'nt':
+        if os.name == 'nt' and os.path.exists(icon_path_win):
             root.iconbitmap(icon_path_win)
-        else:
+        elif os.path.exists(icon_path_png):
             icon = tk.PhotoImage(file=icon_path_png)
             root.iconphoto(False, icon)
     except Exception as e:
-        print(f"No se pudo cargar el icono: {e}")
+        print(f"Could not load icon: {e}")
 
+    # First, ensure we're in the virtual environment
     if not is_running_in_venv():
+        print("Not running in virtual environment...")
+        
         if not os.path.isdir(VENV_DIR):
             msg = ("No virtual environment found.\n\n"
                    "The application will create one now and install dependencies.\n\n"
@@ -167,34 +195,69 @@ def main():
             messagebox.showerror("Error", "Failed to install dependencies in virtual environment.")
             sys.exit(1)
 
-        try:
-            created = create_shortcut()
-            if created:
-                messagebox.showinfo("Shortcut Created", "A desktop shortcut has been created for you.")
-        except Exception as e:
-            print(f"Failed to create shortcut: {e}")
-
+        # We need to restart in the virtual environment
         messagebox.showinfo("Restarting", "Restarting application inside virtual environment.")
         restart_in_venv()
+        # This point should never be reached because restart_in_venv uses os.execv
+        sys.exit(0)
 
+    # Now we're running in the virtual environment
+    print("Running in virtual environment...")
+    
+    # Check for necessary modules first
     missing_modules = check_required_modules()
     if missing_modules:
         msg = f"The following required modules are missing:\n\n{', '.join(missing_modules)}\n\nWould you like to install them now?"
         if messagebox.askyesno("Missing Dependencies", msg):
             if not install_missing_modules(missing_modules):
                 messagebox.showerror("Installation Failed",
-                                     "Failed to install required modules manually, please use pip.")
+                                    "Failed to install required modules manually, please use pip.")
                 sys.exit(1)
             else:
                 messagebox.showinfo("Installation Successful", "Modules installed successfully. Restarting...")
                 os.execv(sys.executable, [sys.executable] + sys.argv)
         else:
             sys.exit(1)
+            
+    # Check if pywin32 is required and install it if needed (Windows only)
+    if os.name == "nt":
+        try:
+            import win32com.client
+            print("pywin32 is already installed.")
+        except ImportError:
+            print("pywin32 is not installed. Installing...")
+            try:
+                subprocess.check_call([sys.executable, "-m", "pip", "install", "pywin32"])
+                messagebox.showinfo("Module Installed", 
+                                  "pywin32 was installed. The application will now restart.")
+                os.execv(sys.executable, [sys.executable] + sys.argv)
+            except Exception as e:
+                print(f"Error installing pywin32: {e}")
+                messagebox.showerror("Installation Error", f"Failed to install pywin32: {e}")
+                sys.exit(1)
 
+    # Try to create shortcut (only show dialog if we're in the venv)
+    if messagebox.askyesno("Create Shortcut", "Would you like to create a desktop shortcut?"):
+        try:
+            print("Attempting to create desktop shortcut...")
+            created = create_shortcut()
+            if created:
+                messagebox.showinfo("Shortcut Created", "A desktop shortcut has been created for you.")
+            else:
+                print("Shortcut was not created or already existed.")
+        except Exception as e:
+            error_msg = f"Failed to create shortcut: {e}\n{traceback.format_exc()}"
+            print(error_msg)
+            messagebox.showerror("Shortcut Creation Error", error_msg)
+
+    # Continue with the main application
     root.deiconify()
 
     try:
         from main import AutoClickerApp, Recorder, Player
+        
+        # Show success message if everything loaded correctly
+        print("Successfully loaded all modules and components")
 
         app = AutoClickerApp(root)
         app.recorder = Recorder(app)
