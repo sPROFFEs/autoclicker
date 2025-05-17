@@ -58,30 +58,24 @@ exit
 
     return bat_path
 
-def create_windows_shortcut():
+def import_or_install(module_name, package_name=None):
+    package_name = package_name or module_name
     try:
-        import pythoncom
-        from win32com.shell import shell, shellcon
-        from win32com.client import Dispatch
+        module = __import__(module_name)
+        return module
     except ImportError:
-        print("pywin32 no encontrado, instalando...")
-        venv_python = get_venv_python()
-        subprocess.check_call([venv_python, "-m", "pip", "install", "pywin32"])
+        print(f"{module_name} no encontrado, instalando {package_name}...")
+        python_bin = get_venv_python()
+        subprocess.check_call([python_bin, "-m", "pip", "install", package_name])
+        print(f"{package_name} instalado. Reiniciando script para aplicar cambios...")
+        os.execv(python_bin, [python_bin] + sys.argv)
 
-        pywin32_path = os.path.join(os.path.dirname(venv_python), "Lib", "site-packages", "pywin32_system32")
-        if pywin32_path not in os.environ["PATH"]:
-            os.environ["PATH"] = pywin32_path + os.pathsep + os.environ["PATH"]
-            sys.path.append(pywin32_path)
 
-        # Reintentar importación
-        try:
-            import pythoncom
-            from win32com.shell import shell, shellcon
-            from win32com.client import Dispatch
-        except ImportError as e:
-            print("No se pudo importar pywin32 después de la instalación.")
-            print(f"Error: {e}")
-            return False
+def create_windows_shortcut():
+    # Intentamos importar pywin32 y sus componentes, o instalarlos si no existen
+    pythoncom = import_or_install("pythoncom", "pywin32")
+    from win32com.shell import shell, shellcon
+    from win32com.client import Dispatch
 
     desktop = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
     shortcut_path = os.path.join(desktop, "AutoClicker.lnk")
@@ -98,10 +92,12 @@ def create_windows_shortcut():
     shell_link.WorkingDirectory = working_dir
     shell_link.IconLocation = os.path.abspath("icon.ico")
     shell_link.WindowStyle = 7  # Minimized
+    shell_link.Description = "AutoClicker launcher"
     shell_link.Save()
 
     print(f"Shortcut created at {shortcut_path}")
     return True
+
 
 def create_linux_shortcut():
     desktop = os.path.join(os.path.expanduser("~"), "Desktop")
