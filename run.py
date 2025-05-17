@@ -68,7 +68,6 @@ def create_windows_shortcut():
         venv_python = get_venv_python()
         subprocess.check_call([venv_python, "-m", "pip", "install", "pywin32"])
 
-        # 🔥 WORKAROUND para Python 3.12+: forzar path pywin32_system32
         pywin32_path = os.path.join(os.path.dirname(venv_python), "Lib", "site-packages", "pywin32_system32")
         if pywin32_path not in os.environ["PATH"]:
             os.environ["PATH"] = pywin32_path + os.pathsep + os.environ["PATH"]
