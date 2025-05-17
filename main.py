@@ -12,7 +12,7 @@ from player import Player
 class AutoClickerApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Professional AutoClicker")
+        self.root.title("PyClickerRecorder")
         self.root.geometry("650x500")
         center_window(self.root)
         
@@ -56,7 +56,6 @@ class AutoClickerApp:
         
         notebook.add(self.record_tab, text="Record & Play")
         notebook.add(self.settings_tab, text="Settings")
-        notebook.add(self.help_tab, text="Help")
         
         # Status bar
         self.status_var = tk.StringVar(value="Ready")
@@ -150,7 +149,7 @@ class AutoClickerApp:
 
     def create_help_tab(self, parent):
         self.help_tab = parent
-        help_text = """Professional AutoClicker - Quick Guide
+        help_text = """PyClickerRecorder - Quick Guide
 
 Recording:
 1. Press F6 to start/stop recording
@@ -166,6 +165,7 @@ Editing:
 - Right-click actions to:
   • Delete selected action
   • Insert custom delay
+- Click on edit tool bar option to clear al records
 - Use File menu to save/load macros
 
 Hotkeys:
