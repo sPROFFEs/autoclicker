@@ -140,13 +140,17 @@ def create_linux_shortcut():
     script_path = os.path.abspath("run.py")
     icon_path = os.path.abspath("icon.png")
 
+    display = os.environ.get("DISPLAY", ":0")
+    xauthority = os.environ.get("XAUTHORITY", os.path.expanduser("~/.Xauthority"))
+
     content = f"""[Desktop Entry]
 Type=Application
 Name=AutoClicker
-Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY {python_path} {script_path}
+Exec=pkexec env DISPLAY={display} XAUTHORITY={xauthority} {python_path} {script_path}
 Icon={icon_path}
 Terminal=false
 """
+
 
     with open(shortcut_path, "w") as f:
         f.write(content)
