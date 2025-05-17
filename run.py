@@ -159,17 +159,6 @@ Terminal=false
     print(f"Shortcut created at {shortcut_path}")
     return True
 
-def get_linux_desktop_dir():
-    try:
-        path = subprocess.check_output(['xdg-user-dir', 'DESKTOP'], text=True).strip()
-        if os.path.isdir(path):
-            return path
-    except Exception as e:
-        print(f"Could not get desktop directory using xdg-user-dir: {e}")
-    # Fallback:
-    fallback = os.path.join(os.path.expanduser("~"), "Desktop")
-    return fallback
-
 def create_shortcut():
     if os.name == "nt":
         return create_windows_shortcut()
@@ -177,18 +166,6 @@ def create_shortcut():
         return create_linux_shortcut()
     return False
 
-
-def get_linux_desktop_dir():
-    import subprocess
-    try:
-        path = subprocess.check_output(['xdg-user-dir', 'DESKTOP'], text=True).strip()
-        if os.path.isdir(path):
-            return path
-    except Exception as e:
-        print(f"Could not get desktop directory using xdg-user-dir: {e}")
-    # Fallback:
-    fallback = os.path.join(os.path.expanduser("~"), "Desktop")
-    return fallback
 
 
 def main():
@@ -283,7 +260,7 @@ def main():
         except Exception as e:
             print(f"Error checking shortcut existence: {e}")
     elif os.name == "posix":
-        desktop = get_linux_desktop_dir()
+        desktop = os.path.join(os.path.expanduser("~"), "Desktop")
         shortcut_path = os.path.join(desktop, "AutoClicker.desktop")
         shortcut_exists = os.path.exists(shortcut_path)
 
@@ -326,3 +303,7 @@ def main():
         messagebox.showerror("Application Error", f"An unexpected error occurred:\n\n{e}\n\n{err}")
         print(err)
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
