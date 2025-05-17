@@ -52,9 +52,7 @@ The latest installers for **Windows** and **Linux** are available in the [Releas
    * Create a desktop shortcut (`AutoClicker.desktop`).
 
 6. Launch the application from the created Desktop shortcut. If the shortcut does not appear, check the `~/Desktop` directory or your system's default desktop folder.
-
-<img src="https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/videos/linux_installation.gif" width="600" height="400"/>
-
+   
 ![Linux demo video](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/videos/linux_installation.gif)
 
 ---
