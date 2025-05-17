@@ -16,7 +16,7 @@ The latest installers for **Windows** and **Linux** are available in the [Releas
 
 1. Download the Windows installer (`PyclickRecorder_Windows_installer.exe`) from the [Releases](https://github.com/sPROFFEs/autoclicker/releases/download/1.0/PyclickRecorder_Windows_installer.exe).
 2. Run the installer and follow the on-screen instructions.
-3. Make sure to select to set the python path permanently on the installation wizard. (You can check the installation [demo video](https://github.com/sPROFFEs/autoclicker/blob/with-installer-code/videos/windows_installation.gif) for reference)
+3. Make sure to select to set the python path permanently on the installation wizard. (You can check the installation demo video below for reference)
 3. After installing python, it should automatically open the app folder.
 4. Just launch the file `run.py` by double-clicking it.
 5. It should creat all the required files and folders, once all dependencies are installed the app will start but with a terminal window open.
