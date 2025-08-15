@@ -30,6 +30,8 @@ namespace PyClickerRecorder
             this.recordButton.Click += RecordButton_Click;
             this.saveMenuItem.Click += SaveMenuItem_Click;
             this.loadMenuItem.Click += LoadMenuItem_Click;
+            this.speedTrackBar.ValueChanged += SpeedTrackBar_ValueChanged;
+            this.infiniteLoopCheckBox.CheckedChanged += InfiniteLoopCheckBox_CheckedChanged;
 
             // Global Hotkeys
             _globalHook = Gma.System.MouseKeyHook.Hook.GlobalEvents();
@@ -96,6 +98,18 @@ namespace PyClickerRecorder
             }
         }
 
+        private void InfiniteLoopCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            loopCountNumeric.Enabled = !infiniteLoopCheckBox.Checked;
+        }
+
+        private void SpeedTrackBar_ValueChanged(object sender, EventArgs e)
+        {
+            // Scale trackbar value (1-20) to a speed factor (e.g., 0.1x to 2.0x)
+            double speedFactor = speedTrackBar.Value / 10.0;
+            speedValueLabel.Text = $"{speedFactor:F1}x";
+        }
+
         private async void PlayButton_Click(object sender, EventArgs e)
         {
             if (_isPlaying)
@@ -117,7 +131,10 @@ namespace PyClickerRecorder
 
             try
             {
-                await _player.Play(_recordedActions, _playbackCts.Token);
+                int loopCount = infiniteLoopCheckBox.Checked ? 0 : (int)loopCountNumeric.Value;
+                double speedFactor = speedTrackBar.Value / 10.0;
+
+                await _player.Play(_recordedActions, loopCount, speedFactor, _playbackCts.Token);
             }
             catch (Exception ex)
             {

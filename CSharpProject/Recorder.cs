@@ -2,6 +2,7 @@ using Gma.System.MouseKeyHook;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PyClickerRecorder
@@ -10,6 +11,7 @@ namespace PyClickerRecorder
     {
         private IKeyboardMouseEvents _globalHook;
         private Stopwatch _stopwatch;
+        private Point? _lastMousePosition;
 
         public List<RecordedAction> Actions { get; private set; }
         public bool IsRecording { get; private set; }
@@ -25,6 +27,7 @@ namespace PyClickerRecorder
             if (IsRecording) return;
 
             Actions.Clear();
+            _lastMousePosition = null;
             IsRecording = true;
             _stopwatch.Restart();
 
@@ -47,9 +50,7 @@ namespace PyClickerRecorder
             _globalHook.MouseDownExt += OnMouseDown;
             _globalHook.MouseUpExt += OnMouseUp;
             _globalHook.MouseWheelExt += OnMouseWheel;
-            // Note: MouseMove is very performance-intensive. We'll skip it for now
-            // to keep the example simple, but it could be added here.
-
+            _globalHook.MouseMoveExt += OnMouseMove;
             _globalHook.KeyDown += OnKeyDown;
             _globalHook.KeyUp += OnKeyUp;
         }
@@ -59,6 +60,7 @@ namespace PyClickerRecorder
             _globalHook.MouseDownExt -= OnMouseDown;
             _globalHook.MouseUpExt -= OnMouseUp;
             _globalHook.MouseWheelExt -= OnMouseWheel;
+            _globalHook.MouseMoveExt -= OnMouseMove;
             _globalHook.KeyDown -= OnKeyDown;
             _globalHook.KeyUp -= OnKeyUp;
         }
@@ -83,6 +85,7 @@ namespace PyClickerRecorder
 
         private void OnMouseDown(object sender, MouseEventExtArgs e)
         {
+            _lastMousePosition = e.Location;
             AddAction(new MouseClickAction
             {
                 Position = e.Location,
@@ -93,6 +96,7 @@ namespace PyClickerRecorder
 
         private void OnMouseUp(object sender, MouseEventExtArgs e)
         {
+            _lastMousePosition = e.Location;
             AddAction(new MouseClickAction
             {
                 Position = e.Location,
@@ -103,11 +107,30 @@ namespace PyClickerRecorder
 
         private void OnMouseWheel(object sender, MouseEventExtArgs e)
         {
+            _lastMousePosition = e.Location;
             AddAction(new MouseScrollAction
             {
                 Position = e.Location,
                 Amount = e.Delta // e.g. 120 for one scroll up, -120 for one scroll down
             });
+        }
+
+        private void OnMouseMove(object sender, MouseEventExtArgs e)
+        {
+            const int minDistanceSquared = 5 * 5; // Only record if moved 5 pixels
+
+            if (_lastMousePosition.HasValue)
+            {
+                var dx = e.Location.X - _lastMousePosition.Value.X;
+                var dy = e.Location.Y - _lastMousePosition.Value.Y;
+                if ((dx * dx + dy * dy) < minDistanceSquared)
+                {
+                    return; // Not moved enough, ignore event
+                }
+            }
+
+            _lastMousePosition = e.Location;
+            AddAction(new MouseMoveAction { Position = e.Location });
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)

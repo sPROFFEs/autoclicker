@@ -11,22 +11,31 @@ namespace PyClickerRecorder
         private bool _isPlaying = false;
         private CancellationTokenSource _cancellationTokenSource;
 
-        public async Task Play(List<RecordedAction> actions, CancellationToken token)
+        public async Task Play(List<RecordedAction> actions, int loopCount, double speedFactor, CancellationToken token)
         {
             if (_isPlaying) return;
 
             _isPlaying = true;
             try
             {
-                foreach (var action in actions)
+                int loopsToRun = loopCount <= 0 ? int.MaxValue : loopCount;
+
+                for (int i = 0; i < loopsToRun; i++)
                 {
+                    // Check for cancellation at the start of each loop
                     token.ThrowIfCancellationRequested();
-                    await ExecuteAction(action);
+
+                    foreach (var action in actions)
+                    {
+                        // Check for cancellation before each action
+                        token.ThrowIfCancellationRequested();
+                        await ExecuteAction(action, speedFactor);
+                    }
                 }
             }
             catch (OperationCanceledException)
             {
-                // Playback was stopped by the user
+                // Playback was stopped by the user, this is expected.
             }
             finally
             {
@@ -42,7 +51,7 @@ namespace PyClickerRecorder
             }
         }
 
-        private async Task ExecuteAction(RecordedAction action)
+        private async Task ExecuteAction(RecordedAction action, double speedFactor)
         {
             switch (action)
             {
@@ -80,7 +89,10 @@ namespace PyClickerRecorder
                     break;
 
                 case DelayAction delay:
-                    await Task.Delay(TimeSpan.FromSeconds(delay.Duration));
+                    // Ensure speedFactor is not zero to avoid division errors
+                    double safeSpeedFactor = speedFactor > 0 ? speedFactor : 1.0;
+                    var adjustedDuration = delay.Duration / safeSpeedFactor;
+                    await Task.Delay(TimeSpan.FromSeconds(adjustedDuration));
                     break;
             }
         }
