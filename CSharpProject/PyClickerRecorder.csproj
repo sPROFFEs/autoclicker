@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>../icon.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     <AssemblyName>PyClickerRecorder</AssemblyName>
 
     <!-- Settings for single-file executable -->
@@ -24,6 +24,10 @@
 
   <ItemGroup>
     <PackageReference Include="MouseKeyHook" Version="5.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="icon.ico" />
   </ItemGroup>
 
 </Project>
