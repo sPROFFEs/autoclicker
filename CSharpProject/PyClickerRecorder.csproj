@@ -8,6 +8,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>../icon.ico</ApplicationIcon>
     <AssemblyName>PyClickerRecorder</AssemblyName>
+
+    <!-- Settings for single-file executable -->
+    <!-- This creates a single .exe but requires the .NET runtime to be installed on the target machine -->
+    <PublishSingleFile>true</PublishSingleFile>
+
+    <!-- Metadata to appear more trustworthy -->
+    <Company>PyClickerRecorder</Company>
+    <Product>PyClickerRecorder</Product>
+    <Description>A tool to record and play back mouse and keyboard actions.</Description>
+    <Copyright>Copyright © 2024</Copyright>
+    <Version>1.1.0</Version>
+
   </PropertyGroup>
 
   <ItemGroup>

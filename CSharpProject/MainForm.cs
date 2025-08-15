@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.IO;
 using System.Text.Json;
 using System.Windows.Forms;
@@ -18,6 +19,17 @@ namespace PyClickerRecorder
         public MainForm()
         {
             InitializeComponent();
+
+            // Set window icon
+            try
+            {
+                this.Icon = new Icon("../icon.ico");
+            }
+            catch (FileNotFoundException)
+            {
+                // Icon file not found, continue without it.
+                Console.WriteLine("icon.ico not found. Skipping icon set.");
+            }
 
             _player = new Player();
             _recorder = new Recorder();
