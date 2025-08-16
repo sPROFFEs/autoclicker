@@ -1,4 +1,31 @@
-# PyClickerRecorder
+# C# Windows Application
+
+## Download
+
+You can download the latest compiled version for Windows from **[HERE - ADD LINK]**.
+
+## Features
+
+This macro recorder includes the following features:
+
+### Recording and Playback
+- **Record Actions:** Captures mouse movements, clicks, scrolling, and keyboard presses.
+- **Play Actions:** Executes the recorded sequence of actions.
+- **Playback Speed:** Adjust the speed at which actions are replayed.
+- **Looping:** Configure the macro to repeat a specific number of times or infinitely.
+- **Save & Load:** Save your macros to `.json` files to use them later.
+
+### Advanced Features
+- **Global Hotkeys:** Start/stop recording with **F6** and playback with **F7** from any application. The hotkeys themselves are not recorded in the macro.
+- **Minimize to System Tray:** The application can run in the background. When minimized, it will hide in the system tray to stay out of the way.
+- **Task Scheduler:** Automate the execution of your macros with the built-in scheduler in the "Settings" tab.
+    - **Run at a specific time:** Schedule the macro to run once at a future date and time.
+    - **Run in a time range:** Have the macro run on a continuous loop between a start and end time.
+
+---
+<br>
+
+# PyClickerRecorder (Python Version)
 
 PyClickerRecorder is a lightweight application to automate mouse clicks. It supports Windows and Linux platforms with easy installation and setup.
 
