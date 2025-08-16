@@ -2,7 +2,7 @@
 
 ## Download
 
-You can download the latest compiled version for Windows from **[HERE - ADD LINK]**.
+You can download the latest compiled version for Windows from [HERE](https://github.com/sPROFFEs/autoclicker/releases/download/1.0/PyClickerRecorder.exe).
 
 ## Features
 
