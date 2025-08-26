@@ -1,11 +1,3 @@
-# C# Windows Application
-
-## Download
-
-You can download the latest compiled version for Windows from [HERE](https://github.com/sPROFFEs/autoclicker/releases/download/1.0/PyClickerRecorder.exe).
-
-Or you can download the project from [HERE](https://github.com/sPROFFEs/autoclicker/tree/C%23-Version) and compile it yourself.
-
 ## Features
 
 This macro recorder includes the following features:
