@@ -6,7 +6,7 @@
     height="50"
     style="vertical-align: middle; margin-right: 10px;"
   />
-  PyClickerRecorder
+  PyClicker Python version
 </h1>
 
 ## Features
