@@ -1,3 +1,14 @@
+<h1>
+  <img
+    src="/assets_readme/icon.png"
+    alt="PyClickerRecorder Icon"
+    width="50"
+    height="50"
+    style="vertical-align: middle; margin-right: 10px;"
+  />
+  PyClickerRecorder
+</h1>
+
 ## Features
 
 This macro recorder includes the following features:
