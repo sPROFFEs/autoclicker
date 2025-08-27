@@ -1,6 +1,6 @@
 <h1>
   <img
-    src="/assets_readme/icon.png"
+    src="icon.png"
     alt="PyClickerRecorder Icon"
     width="50"
     height="50"
