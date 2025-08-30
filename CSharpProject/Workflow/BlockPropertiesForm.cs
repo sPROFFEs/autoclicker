@@ -61,8 +61,6 @@ namespace PyClickerRecorder.Workflow
         private ComboBox _variableSourceComboBox;
         private TextBox _variableSourceValueTextBox;
         private ComboBox _variableSourceComboBox2; // For Variable source dropdown
-        private TextBox _directValueTextBox; // For direct value input
-        private Button _setValueButton; // Set Value button
 
         public BlockPropertiesForm(WorkflowBlock block, List<SavedMacro> availableMacros, PyClickerRecorder.Workflow.Workflow workflow = null)
         {
@@ -75,20 +73,8 @@ namespace PyClickerRecorder.Workflow
             LoadBlockProperties();
         }
         
-        // Helper method to check if text is a UI placeholder that shouldn't be saved
-        private bool IsUIPlaceholderText(string text)
-        {
-            if (string.IsNullOrEmpty(text))
-                return false;
-                
-            // Only these exact UI placeholders should be filtered out when saving
-            return text == PLACEHOLDER_STATIC_VALUE ||
-                   text == PLACEHOLDER_PROMPT_TEXT ||
-                   text == PLACEHOLDER_TYPE_VARIABLE;
-        }
-        
-        // Helper method to check if text is any kind of placeholder (for UI display logic)
-        private bool IsAnyPlaceholderText(string text)
+        // Helper method to check if text is a placeholder
+        private bool IsPlaceholderText(string text)
         {
             if (string.IsNullOrEmpty(text))
                 return false;
@@ -98,7 +84,8 @@ namespace PyClickerRecorder.Workflow
                    text == PLACEHOLDER_CLIPBOARD ||
                    text == PLACEHOLDER_WINDOW_TITLE ||
                    text == PLACEHOLDER_NOT_SUPPORTED ||
-                   text == PLACEHOLDER_TYPE_VARIABLE;
+                   text == PLACEHOLDER_TYPE_VARIABLE ||
+                   (text.StartsWith("(") && text.EndsWith(")"));
         }
 
         private void SetupForm()
@@ -614,7 +601,7 @@ namespace PyClickerRecorder.Workflow
 
         private void CreateVariableBlockControls(ref int yOffset)
         {
-            // Variable name (will sync with block name)
+            // Variable name
             var nameLabel = new Label
             {
                 Text = "Variable Name:",
@@ -628,8 +615,6 @@ namespace PyClickerRecorder.Workflow
                 Location = new Point(120, yOffset),
                 Size = new Size(240, 23)
             };
-            // Sync variable name with block name
-            _variableNameTextBox.TextChanged += (s, e) => _nameTextBox.Text = _variableNameTextBox.Text;
             this.Controls.Add(_variableNameTextBox);
             yOffset += 35;
             
@@ -656,10 +641,10 @@ namespace PyClickerRecorder.Workflow
             this.Controls.Add(_variableSourceComboBox);
             yOffset += 35;
             
-            // Source value (for Clipboard, WindowTitle - read-only info)
+            // Source value
             var sourceValueLabel = new Label
             {
-                Text = "Source Info:",
+                Text = "Source Value:",
                 Location = new Point(12, yOffset),
                 Size = new Size(100, 23)
             };
@@ -668,9 +653,10 @@ namespace PyClickerRecorder.Workflow
             _variableSourceValueTextBox = new TextBox
             {
                 Location = new Point(120, yOffset),
-                Size = new Size(240, 23),
-                Enabled = false
+                Size = new Size(240, 23)
             };
+            _variableSourceValueTextBox.Enter += VariableSourceValueTextBox_Enter;
+            _variableSourceValueTextBox.Leave += VariableSourceValueTextBox_Leave;
             this.Controls.Add(_variableSourceValueTextBox);
             
             // Variable dropdown (for Variable source only)
@@ -683,34 +669,6 @@ namespace PyClickerRecorder.Workflow
             };
             PopulateVariableComboBox(_variableSourceComboBox2);
             this.Controls.Add(_variableSourceComboBox2);
-            yOffset += 35;
-            
-            // Direct value input (for Value source)
-            var valueLabel = new Label
-            {
-                Text = "Value:",
-                Location = new Point(12, yOffset),
-                Size = new Size(100, 23)
-            };
-            this.Controls.Add(valueLabel);
-            
-            _directValueTextBox = new TextBox
-            {
-                Location = new Point(120, yOffset),
-                Size = new Size(160, 23),
-                Visible = false // Initially hidden
-            };
-            this.Controls.Add(_directValueTextBox);
-            
-            _setValueButton = new Button
-            {
-                Text = "Set Value",
-                Location = new Point(290, yOffset),
-                Size = new Size(70, 23),
-                Visible = false // Initially hidden
-            };
-            _setValueButton.Click += SetValueButton_Click;
-            this.Controls.Add(_setValueButton);
             
             yOffset += 35;
         }
@@ -891,9 +849,6 @@ namespace PyClickerRecorder.Workflow
         {
             _variableNameTextBox.Text = variableBlock.VariableName ?? "";
             
-            // Sync variable name with block name
-            _nameTextBox.Text = variableBlock.VariableName ?? "";
-            
             // Find and set the correct source by looking for matching enum string
             var sourceString = variableBlock.Source.ToString();
             for (int i = 0; i < _variableSourceComboBox.Items.Count; i++)
@@ -909,10 +864,6 @@ namespace PyClickerRecorder.Workflow
             if (variableBlock.Source == VariableSource.Variable)
             {
                 _variableSourceComboBox2.Text = variableBlock.SourceValue ?? "";
-            }
-            else if (variableBlock.Source == VariableSource.Value)
-            {
-                _directValueTextBox.Text = variableBlock.DirectValue ?? "";
             }
             else
             {
@@ -1006,7 +957,7 @@ namespace PyClickerRecorder.Workflow
             }
             
             // Get left value from appropriate control
-            if ((leftSource == VariableSource.Variable || leftSource == VariableSource.Value) && _leftVariableComboBox.Visible)
+            if (leftSource == VariableSource.Variable && _leftVariableComboBox.Visible)
             {
                 var leftVariableValue = _leftVariableComboBox.Text ?? "";
                 // Don't save placeholder text for variable names
@@ -1015,16 +966,15 @@ namespace PyClickerRecorder.Workflow
                     leftVariableValue = "";
                 }
                 conditionalBlock.LeftValue = leftVariableValue;
-                System.Diagnostics.Debug.WriteLine($"Conditional block save: Left {leftSource} = '{conditionalBlock.LeftValue}'");
+                System.Diagnostics.Debug.WriteLine($"Conditional block save: Left Variable = '{conditionalBlock.LeftValue}'");
             }
             else
             {
                 var leftValue = _leftValueTextBox.Text ?? "";
-                // Only filter out actual UI placeholders - let any real user data through
-                if (IsUIPlaceholderText(leftValue))
+                // Don't save placeholder text as actual values
+                if (IsPlaceholderText(leftValue))
                 {
                     leftValue = "";
-                    System.Diagnostics.Debug.WriteLine($"Conditional block save: Filtered out UI placeholder from left value");
                 }
                 conditionalBlock.LeftValue = leftValue;
                 System.Diagnostics.Debug.WriteLine($"Conditional block save: Left {leftSource} = '{conditionalBlock.LeftValue}'");
@@ -1042,7 +992,7 @@ namespace PyClickerRecorder.Workflow
             }
             
             // Get right value from appropriate control
-            if ((rightSource == VariableSource.Variable || rightSource == VariableSource.Value) && _rightVariableComboBox.Visible)
+            if (rightSource == VariableSource.Variable && _rightVariableComboBox.Visible)
             {
                 var rightVariableValue = _rightVariableComboBox.Text ?? "";
                 // Don't save placeholder text for variable names
@@ -1051,16 +1001,15 @@ namespace PyClickerRecorder.Workflow
                     rightVariableValue = "";
                 }
                 conditionalBlock.RightValue = rightVariableValue;
-                System.Diagnostics.Debug.WriteLine($"Conditional block save: Right {rightSource} = '{conditionalBlock.RightValue}'");
+                System.Diagnostics.Debug.WriteLine($"Conditional block save: Right Variable = '{conditionalBlock.RightValue}'");
             }
             else
             {
                 var rightValue = _rightValueTextBox.Text ?? "";
-                // Only filter out actual UI placeholders - let any real user data through
-                if (IsUIPlaceholderText(rightValue))
+                // Don't save placeholder text as actual values
+                if (IsPlaceholderText(rightValue))
                 {
                     rightValue = "";
-                    System.Diagnostics.Debug.WriteLine($"Conditional block save: Filtered out UI placeholder from right value");
                 }
                 conditionalBlock.RightValue = rightValue;
                 System.Diagnostics.Debug.WriteLine($"Conditional block save: Right {rightSource} = '{conditionalBlock.RightValue}'");
@@ -1095,10 +1044,7 @@ namespace PyClickerRecorder.Workflow
 
         private void SaveVariableBlockProperties(VariableBlock variableBlock)
         {
-            // Keep variable name and block name in sync
-            var variableName = _variableNameTextBox.Text ?? "";
-            variableBlock.VariableName = variableName;
-            variableBlock.Name = variableName; // Same name for both
+            variableBlock.VariableName = _variableNameTextBox.Text ?? "";
             
             VariableSource source = VariableSource.Clipboard;
             if (Enum.TryParse<VariableSource>(_variableSourceComboBox.SelectedItem?.ToString(), out source))
@@ -1106,32 +1052,28 @@ namespace PyClickerRecorder.Workflow
                 variableBlock.Source = source;
             }
             
-            // Clear all source values first
-            variableBlock.SourceValue = "";
-            variableBlock.DirectValue = "";
-            
-            // Set the appropriate source value based on the selected source
-            switch (source)
+            // Get the source value from appropriate control
+            if (source == VariableSource.Variable && _variableSourceComboBox2.Visible)
             {
-                case VariableSource.Variable:
-                    var variableValue = _variableSourceComboBox2.Text ?? "";
-                    if (variableValue != PLACEHOLDER_TYPE_VARIABLE)
-                    {
-                        variableBlock.SourceValue = variableValue;
-                    }
-                    System.Diagnostics.Debug.WriteLine($"Variable block save: Variable source = '{variableBlock.SourceValue}'");
-                    break;
-                    
-                case VariableSource.Value:
-                    variableBlock.DirectValue = _directValueTextBox.Text ?? "";
-                    System.Diagnostics.Debug.WriteLine($"Variable block save: Direct value = '{variableBlock.DirectValue}'");
-                    break;
-                    
-                case VariableSource.Clipboard:
-                case VariableSource.WindowTitle:
-                    // These don't need source values
-                    System.Diagnostics.Debug.WriteLine($"Variable block save: {source} source (no additional value needed)");
-                    break;
+                var variableValue = _variableSourceComboBox2.Text ?? "";
+                // Don't save placeholder text for variable names
+                if (variableValue == PLACEHOLDER_TYPE_VARIABLE)
+                {
+                    variableValue = "";
+                }
+                variableBlock.SourceValue = variableValue;
+                System.Diagnostics.Debug.WriteLine($"Variable block save: Variable source = '{variableBlock.SourceValue}'");
+            }
+            else
+            {
+                var sourceValue = _variableSourceValueTextBox.Text ?? "";
+                // Don't save placeholder text as actual values
+                if (IsPlaceholderText(sourceValue))
+                {
+                    sourceValue = "";
+                }
+                variableBlock.SourceValue = sourceValue;
+                System.Diagnostics.Debug.WriteLine($"Variable block save: {source} source = '{variableBlock.SourceValue}'");
             }
         }
 
@@ -1166,28 +1108,54 @@ namespace PyClickerRecorder.Workflow
         {
             if (Enum.TryParse<VariableSource>(_variableSourceComboBox.SelectedItem?.ToString(), out var source))
             {
-                // Hide all controls first
-                _variableSourceValueTextBox.Visible = false;
-                _variableSourceComboBox2.Visible = false;
-                _directValueTextBox.Visible = false;
-                _setValueButton.Visible = false;
-                
                 switch (source)
                 {
                     case VariableSource.Clipboard:
                         _variableSourceValueTextBox.Visible = true;
+                        _variableSourceComboBox2.Visible = false;
+                        _variableSourceValueTextBox.Enabled = false;
                         _variableSourceValueTextBox.Text = PLACEHOLDER_CLIPBOARD;
                         break;
                     case VariableSource.WindowTitle:
                         _variableSourceValueTextBox.Visible = true;
+                        _variableSourceComboBox2.Visible = false;
+                        _variableSourceValueTextBox.Enabled = false;
                         _variableSourceValueTextBox.Text = PLACEHOLDER_WINDOW_TITLE;
                         break;
                     case VariableSource.Variable:
+                        _variableSourceValueTextBox.Visible = false;
                         _variableSourceComboBox2.Visible = true;
                         break;
-                    case VariableSource.Value:
-                        _directValueTextBox.Visible = true;
-                        _setValueButton.Visible = true;
+                    case VariableSource.StaticValue:
+                        _variableSourceValueTextBox.Visible = true;
+                        _variableSourceComboBox2.Visible = false;
+                        _variableSourceValueTextBox.Enabled = true;
+                        // Only show placeholder if field is empty or contains placeholder text
+                        if (string.IsNullOrEmpty(_variableSourceValueTextBox.Text) || 
+                            IsPlaceholderText(_variableSourceValueTextBox.Text))
+                        {
+                            _variableSourceValueTextBox.Text = PLACEHOLDER_STATIC_VALUE;
+                            _variableSourceValueTextBox.ForeColor = SystemColors.GrayText;
+                        }
+                        else
+                        {
+                            _variableSourceValueTextBox.ForeColor = SystemColors.WindowText;
+                        }
+                        break;
+                    case VariableSource.UserInput:
+                        _variableSourceValueTextBox.Visible = true;
+                        _variableSourceComboBox2.Visible = false;
+                        _variableSourceValueTextBox.Enabled = true;
+                        if (string.IsNullOrEmpty(_variableSourceValueTextBox.Text) || 
+                            IsPlaceholderText(_variableSourceValueTextBox.Text))
+                        {
+                            _variableSourceValueTextBox.Text = PLACEHOLDER_PROMPT_TEXT;
+                            _variableSourceValueTextBox.ForeColor = SystemColors.GrayText;
+                        }
+                        else
+                        {
+                            _variableSourceValueTextBox.ForeColor = SystemColors.WindowText;
+                        }
                         break;
                 }
             }
@@ -1215,9 +1183,22 @@ namespace PyClickerRecorder.Workflow
                         _leftValueTextBox.Visible = false;
                         _leftVariableComboBox.Visible = true;
                         break;
-                    case VariableSource.Value:
-                        _leftValueTextBox.Visible = false;
-                        _leftVariableComboBox.Visible = true; // Reuse variable combobox for Value variable selection
+                    case VariableSource.StaticValue:
+                        _leftValueTextBox.Visible = true;
+                        _leftVariableComboBox.Visible = false;
+                        _leftValueTextBox.Enabled = true;
+                        // Only clear if it has placeholder text, not user input
+                        if (IsPlaceholderText(_leftValueTextBox.Text))
+                        {
+                            _leftValueTextBox.Text = "";
+                            _leftValueTextBox.ForeColor = SystemColors.WindowText;
+                        }
+                        break;
+                    case VariableSource.UserInput:
+                        _leftValueTextBox.Visible = true;
+                        _leftVariableComboBox.Visible = false;
+                        _leftValueTextBox.Enabled = false; // Disable UserInput in conditionals - it doesn't make sense
+                        _leftValueTextBox.Text = PLACEHOLDER_NOT_SUPPORTED;
                         break;
                 }
             }
@@ -1245,9 +1226,22 @@ namespace PyClickerRecorder.Workflow
                         _rightValueTextBox.Visible = false;
                         _rightVariableComboBox.Visible = true;
                         break;
-                    case VariableSource.Value:
-                        _rightValueTextBox.Visible = false;
-                        _rightVariableComboBox.Visible = true; // Reuse variable combobox for Value variable selection
+                    case VariableSource.StaticValue:
+                        _rightValueTextBox.Visible = true;
+                        _rightVariableComboBox.Visible = false;
+                        _rightValueTextBox.Enabled = true;
+                        // Only clear if it has placeholder text, not user input
+                        if (IsPlaceholderText(_rightValueTextBox.Text))
+                        {
+                            _rightValueTextBox.Text = "";
+                            _rightValueTextBox.ForeColor = SystemColors.WindowText;
+                        }
+                        break;
+                    case VariableSource.UserInput:
+                        _rightValueTextBox.Visible = true;
+                        _rightVariableComboBox.Visible = false;
+                        _rightValueTextBox.Enabled = false; // Disable UserInput in conditionals - it doesn't make sense
+                        _rightValueTextBox.Text = PLACEHOLDER_NOT_SUPPORTED;
                         break;
                 }
             }
@@ -1304,33 +1298,11 @@ namespace PyClickerRecorder.Workflow
             }
         }
         
-        // Set Value button click handler
-        private void SetValueButton_Click(object sender, EventArgs e)
-        {
-            var value = _directValueTextBox.Text ?? "";
-            if (string.IsNullOrEmpty(value))
-            {
-                MessageBox.Show("Please enter a value before setting it.", "No Value", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
-            // Store the value directly in the block
-            if (_block is VariableBlock variableBlock)
-            {
-                variableBlock.DirectValue = value;
-                System.Diagnostics.Debug.WriteLine($"Set direct value '{value}' for variable '{variableBlock.VariableName}'");
-                
-                MessageBox.Show($"Value '{value}' has been set for variable '{variableBlock.VariableName}'.", "Value Set", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-        
         // Event handlers for placeholder text management
         private void VariableSourceValueTextBox_Enter(object sender, EventArgs e)
         {
             var textBox = sender as TextBox;
-            if (textBox != null && IsAnyPlaceholderText(textBox.Text))
+            if (textBox != null && IsPlaceholderText(textBox.Text))
             {
                 textBox.Text = "";
                 textBox.ForeColor = SystemColors.WindowText;
@@ -1347,8 +1319,12 @@ namespace PyClickerRecorder.Workflow
                 {
                     switch (source)
                     {
-                        case VariableSource.Value:
+                        case VariableSource.StaticValue:
                             textBox.Text = PLACEHOLDER_STATIC_VALUE;
+                            textBox.ForeColor = SystemColors.GrayText;
+                            break;
+                        case VariableSource.UserInput:
+                            textBox.Text = PLACEHOLDER_PROMPT_TEXT;
                             textBox.ForeColor = SystemColors.GrayText;
                             break;
                     }

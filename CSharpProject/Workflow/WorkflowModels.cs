@@ -46,7 +46,8 @@ namespace PyClickerRecorder.Workflow
         Clipboard,
         WindowTitle,
         Variable,
-        Value
+        StaticValue,
+        UserInput
     }
 
     public enum LoopType
@@ -93,7 +94,7 @@ namespace PyClickerRecorder.Workflow
         public VariableSource LeftSource { get; set; } = VariableSource.Variable;
         public string LeftValue { get; set; } = "";
         public ConditionType ConditionType { get; set; } = ConditionType.Equals;
-        public VariableSource RightSource { get; set; } = VariableSource.Value;
+        public VariableSource RightSource { get; set; } = VariableSource.StaticValue;
         public string RightValue { get; set; } = "";
         public bool CaseSensitive { get; set; } = false;
         public List<string> TrueBlocks { get; set; } = new List<string>();
@@ -137,7 +138,6 @@ namespace PyClickerRecorder.Workflow
         public string VariableName { get; set; } = "";
         public VariableSource Source { get; set; } = VariableSource.Clipboard;
         public string SourceValue { get; set; } = "";
-        public string DirectValue { get; set; } = ""; // Direct value storage for Value source
 
         public VariableBlock() : base(WorkflowBlockType.VariableBlock) { }
     }

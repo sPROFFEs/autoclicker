@@ -187,15 +187,40 @@ namespace PyClickerRecorder.Workflow
                             value = "";
                         }
                         break;
-                    case VariableSource.Value:
-                        System.Diagnostics.Debug.WriteLine($"Processing direct value: '{variableBlock.DirectValue}'");
-                        value = variableBlock.DirectValue ?? "";
-                        System.Diagnostics.Debug.WriteLine($"Variable block: Using direct value '{value}' exactly as stored");
+                    case VariableSource.StaticValue:
+                        System.Diagnostics.Debug.WriteLine($"Processing static value: '{variableBlock.SourceValue}'");
+                        value = variableBlock.SourceValue ?? "";
+                        // Don't use placeholder text as actual value - be very specific about placeholders
+                        if (value == "Enter static value" || 
+                            value == "Enter prompt text" ||
+                            value == "(Current clipboard content)" ||
+                            value == "(Current window title)" ||
+                            value == "(Not supported in conditions)" ||
+                            value == "(Type variable name)")
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Variable block: StaticValue contains placeholder text '{value}', using empty string");
+                            value = "";
+                        }
+                        else
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Variable block: StaticValue final = '{value}'");
+                        }
+                        break;
+                    case VariableSource.UserInput:
+                        // Show input dialog to user
+                        string prompt = variableBlock.SourceValue ?? "";
+                        if (prompt == "Enter prompt text")
+                        {
+                            prompt = $"Enter value for {variableBlock.VariableName}";
+                        }
+                        System.Diagnostics.Debug.WriteLine($"Showing user input dialog with prompt: '{prompt}'");
+                        value = await GetUserInputAsync(variableBlock.VariableName, prompt);
+                        System.Diagnostics.Debug.WriteLine($"User input received: '{value}'");
                         break;
                 }
 
-                // Additional debugging for clipboard changes
-                if (variableBlock.Source == VariableSource.Clipboard)
+                // Check if macro execution affected clipboard
+                if (variableBlock.Source == VariableSource.StaticValue)
                 {
                     var currentClipboard = await GetClipboardTextAsync();
                     System.Diagnostics.Debug.WriteLine($"Current clipboard after variable processing: '{currentClipboard}'");
@@ -452,17 +477,6 @@ namespace PyClickerRecorder.Workflow
             }
         }
 
-        // Helper method to check if a value is actually a placeholder from the UI
-        private bool IsUIPlaceholder(string value)
-        {
-            if (string.IsNullOrEmpty(value))
-                return false;
-                
-            // Only these exact strings are considered placeholders (legacy support)
-            return value == "Enter static value" ||
-                   value == "Enter prompt text";
-        }
-        
         private async Task<string> GetVariableValue(WorkflowExecutionContext context, VariableSource source, string value)
         {
             try
@@ -487,22 +501,28 @@ namespace PyClickerRecorder.Workflow
                             result = "";
                         }
                         break;
-                    case VariableSource.Value:
-                        // For Value source, we need to find the variable block with this name and get its DirectValue
-                        var variableBlock = context.Workflow.Blocks
-                            .OfType<VariableBlock>()
-                            .FirstOrDefault(vb => vb.VariableName == value && vb.Source == VariableSource.Value);
-                        
-                        if (variableBlock != null)
+                    case VariableSource.StaticValue:
+                        result = value ?? "";
+                        // Don't use placeholder text as actual value in conditions - be very specific about placeholders
+                        if (result == "Enter static value" || 
+                            result == "Enter prompt text" ||
+                            result == "(Current clipboard content)" ||
+                            result == "(Current window title)" ||
+                            result == "(Not supported in conditions)" ||
+                            result == "(Type variable name)")
                         {
-                            result = variableBlock.DirectValue ?? "";
-                            System.Diagnostics.Debug.WriteLine($"GetVariableValue: Found variable block '{value}', using direct value '{result}'");
+                            result = "";
+                            System.Diagnostics.Debug.WriteLine($"GetVariableValue: StaticValue contained placeholder text '{result}', using empty string");
                         }
                         else
                         {
-                            result = "";
-                            System.Diagnostics.Debug.WriteLine($"GetVariableValue: Variable block '{value}' with Value source not found");
+                            System.Diagnostics.Debug.WriteLine($"GetVariableValue: StaticValue input='{value}' result='{result}'");
                         }
+                        break;
+                    case VariableSource.UserInput:
+                        // UserInput in conditions doesn't make sense - use the default value instead
+                        result = value ?? "";
+                        System.Diagnostics.Debug.WriteLine($"UserInput source in condition - using default value: '{result}'");
                         break;
                     default:
                         result = "";
@@ -528,6 +548,65 @@ namespace PyClickerRecorder.Workflow
             return string.Compare(left, right, StringComparison.Ordinal);
         }
 
+        private async Task<string> GetUserInputAsync(string variableName, string? defaultValue)
+        {
+            return await Task.Run(() =>
+            {
+                try
+                {
+                    // Create a simple input dialog
+                    using (var inputForm = new Form())
+                    {
+                        inputForm.Text = "User Input Required";
+                        inputForm.Size = new Size(400, 150);
+                        inputForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+                        inputForm.StartPosition = FormStartPosition.CenterScreen;
+                        inputForm.MaximizeBox = false;
+                        inputForm.MinimizeBox = false;
+
+                        var label = new Label
+                        {
+                            Text = $"Enter value for variable '{variableName}':",
+                            Location = new Point(12, 15),
+                            Size = new Size(360, 20)
+                        };
+
+                        var textBox = new TextBox
+                        {
+                            Text = defaultValue ?? "",
+                            Location = new Point(12, 40),
+                            Size = new Size(360, 23)
+                        };
+
+                        var okButton = new Button
+                        {
+                            Text = "OK",
+                            Location = new Point(217, 75),
+                            Size = new Size(75, 23),
+                            DialogResult = DialogResult.OK
+                        };
+
+                        var cancelButton = new Button
+                        {
+                            Text = "Cancel",
+                            Location = new Point(297, 75),
+                            Size = new Size(75, 23),
+                            DialogResult = DialogResult.Cancel
+                        };
+
+                        inputForm.Controls.AddRange(new Control[] { label, textBox, okButton, cancelButton });
+                        inputForm.AcceptButton = okButton;
+                        inputForm.CancelButton = cancelButton;
+
+                        return inputForm.ShowDialog() == DialogResult.OK ? textBox.Text : (defaultValue ?? "");
+                    }
+                }
+                catch
+                {
+                    return defaultValue ?? "";
+                }
+            });
+        }
 
         private async Task<string> GetClipboardTextAsync()
         {
