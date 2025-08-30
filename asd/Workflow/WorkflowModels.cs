@@ -15,28 +15,15 @@ namespace PyClickerRecorder.Workflow
 
     public enum ConditionType
     {
-        // Standard operators
+        // Essential operators only
         Equals,
         NotEquals,
         Contains,
         NotContains,
-        StartsWith,
-        EndsWith,
         GreaterThan,
         LessThan,
-        GreaterThanOrEqual,
-        LessThanOrEqual,
         IsEmpty,
         IsNotEmpty,
-        MatchesRegex,
-        // Legacy for backward compatibility
-        ClipboardContains,
-        ClipboardEquals,
-        ClipboardMatches,
-        WindowTitleContains,
-        WindowTitleEquals,
-        VariableEquals,
-        VariableContains,
         Always,
         Never
     }
@@ -99,6 +86,10 @@ namespace PyClickerRecorder.Workflow
         public List<string> TrueBlocks { get; set; } = new List<string>();
         public List<string> FalseBlocks { get; set; } = new List<string>();
         
+        // Direct storage for static values when using Value source
+        public string? LeftStaticValue { get; set; } = null; 
+        public string? RightStaticValue { get; set; } = null;
+        
         // Legacy properties for backward compatibility
         public string? ConditionValue { get; set; } = "";
         public string TrueBlock { get; set; } = "";
@@ -155,7 +146,6 @@ namespace PyClickerRecorder.Workflow
         public string Name { get; set; } = "New Workflow";
         public string Description { get; set; } = "";
         public List<WorkflowBlock> Blocks { get; set; } = new List<WorkflowBlock>();
-        public List<VariableBlock> HiddenVariables { get; set; } = new List<VariableBlock>(); // Separate collection for hidden variables
         public string StartBlockId { get; set; } = "";
         public bool IsEnabled { get; set; } = true;
         public DateTime CreatedDate { get; set; } = DateTime.Now;

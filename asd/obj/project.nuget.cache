@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "khqO2szRFpk=",
+  "dgSpecHash": "IJKadMSoTEc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sdksdk\\Documents\\GitHub\\autoclicker\\asd\\PyClickerRecorder.csproj",
+  "projectFilePath": "C:\\Users\\sdksdk\\Documents\\GitHub\\PyClickerRecorder\\CSharpProject\\PyClickerRecorder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sdksdk\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.19\\microsoft.net.illink.tasks.8.0.19.nupkg.sha512",
     "C:\\Users\\sdksdk\\.nuget\\packages\\mousekeyhook\\5.7.1\\mousekeyhook.5.7.1.nupkg.sha512",

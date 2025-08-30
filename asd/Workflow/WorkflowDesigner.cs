@@ -18,11 +18,11 @@ namespace PyClickerRecorder.Workflow
         private Point _mousePosition;
         private readonly List<SavedMacro> _availableMacros;
 
-        // UI Constants
-        private const int BlockWidth = 120;
-        private const int BlockHeight = 60;
-        private const int GridSize = 20;
-        private const int CanvasMargin = 50;
+        // UI Constants - Improved for better visibility and usability
+        private const int BlockWidth = 160;
+        private const int BlockHeight = 80;
+        private const int GridSize = 25;
+        private const int CanvasMargin = 75;
 
         public Workflow CurrentWorkflow => _currentWorkflow;
 
@@ -112,16 +112,6 @@ namespace PyClickerRecorder.Workflow
             btnRun.Click += RunWorkflow_Click;
             toolPanel.Controls.Add(btnRun);
 
-            var btnHiddenVars = new Button
-            {
-                Text = "Manage Hidden Variables",
-                Location = new Point(10, 300),
-                Size = new Size(180, 30),
-                BackColor = Color.LightCyan
-            };
-            btnHiddenVars.Click += ManageHiddenVariables_Click;
-            toolPanel.Controls.Add(btnHiddenVars);
-
             this.Controls.Add(toolPanel);
         }
 
@@ -164,6 +154,7 @@ namespace PyClickerRecorder.Workflow
             this.MouseDown += Canvas_MouseDown;
             this.MouseMove += Canvas_MouseMove;
             this.MouseUp += Canvas_MouseUp;
+            this.MouseDoubleClick += Canvas_MouseDoubleClick;
             this.Paint += Canvas_Paint;
             this.KeyDown += Canvas_KeyDown;
             this.KeyPreview = true;
@@ -174,10 +165,11 @@ namespace PyClickerRecorder.Workflow
             var button = sender as Button;
             var blockType = (WorkflowBlockType)button.Tag;
             
-            // Create new block at a default position
+            // Create new block at a default position with better spacing
             var newBlock = CreateBlock(blockType);
-            newBlock.X = CanvasMargin + _currentWorkflow.Blocks.Count * (BlockWidth + 20);
-            newBlock.Y = CanvasMargin;
+            
+            // Auto-arrange blocks to avoid overlapping
+            ArrangeNewBlock(newBlock);
             
             _currentWorkflow.Blocks.Add(newBlock);
             
@@ -203,7 +195,11 @@ namespace PyClickerRecorder.Workflow
 
         private void Canvas_MouseDown(object sender, MouseEventArgs e)
         {
+            // Ensure the form has focus
+            this.Focus();
+            
             var clickedBlock = GetBlockAtPosition(e.Location);
+            System.Diagnostics.Debug.WriteLine($"Mouse down: Button={e.Button}, Location={e.Location}, ClickedBlock={clickedBlock?.Name ?? "null"}");
             
             if (e.Button == MouseButtons.Left)
             {
@@ -226,9 +222,14 @@ namespace PyClickerRecorder.Workflow
                     _selectedBlock = null;
                 }
             }
-            else if (e.Button == MouseButtons.Right && clickedBlock != null)
+            else if (e.Button == MouseButtons.Right)
             {
-                ShowContextMenu(clickedBlock, e.Location);
+                System.Diagnostics.Debug.WriteLine($"Right click detected on block: {clickedBlock?.Name ?? "null"}");
+                if (clickedBlock != null)
+                {
+                    _selectedBlock = clickedBlock; // Select the block first
+                    ShowContextMenu(clickedBlock, e.Location);
+                }
             }
             
             this.Invalidate();
@@ -306,12 +307,9 @@ namespace PyClickerRecorder.Workflow
 
         private void DrawBlocks(Graphics g)
         {
-            foreach (var block in _currentWorkflow.Blocks)
+            var allBlocks = GetAllAccessibleBlocks();
+            foreach (var block in allBlocks)
             {
-                // Skip hidden variables (positioned off-screen)
-                if (IsHiddenVariable(block))
-                    continue;
-                    
                 DrawBlock(g, block);
             }
         }
@@ -339,16 +337,18 @@ namespace PyClickerRecorder.Workflow
                 g.DrawRectangle(pen, rect);
             }
             
-            // Draw block text
-            var textRect = new Rectangle(rect.X + 5, rect.Y + 5, rect.Width - 10, rect.Height - 10);
+            // Draw block text with better padding and font
+            var textRect = new Rectangle(rect.X + 8, rect.Y + 8, rect.Width - 16, rect.Height - 16);
             using (var brush = new SolidBrush(Color.Black))
+            using (var font = new Font("Segoe UI", 9, FontStyle.Regular))
             {
                 var format = new StringFormat
                 {
                     Alignment = StringAlignment.Center,
-                    LineAlignment = StringAlignment.Center
+                    LineAlignment = StringAlignment.Center,
+                    Trimming = StringTrimming.EllipsisCharacter
                 };
-                g.DrawString(block.Name, this.Font, brush, textRect, format);
+                g.DrawString(block.Name, font, brush, textRect, format);
             }
             
             // Draw connection points
@@ -358,17 +358,19 @@ namespace PyClickerRecorder.Workflow
         private void DrawConnectionPoints(Graphics g, WorkflowBlock block)
         {
             var center = GetBlockCenter(block);
-            var pointSize = 6;
+            var pointSize = 8;
             
-            // Output point (bottom)
+            // Output point (bottom) - more visible
             var outputPoint = new Point(center.X, block.Y + BlockHeight);
             var outputRect = new Rectangle(outputPoint.X - pointSize/2, outputPoint.Y - pointSize/2, pointSize, pointSize);
-            g.FillEllipse(Brushes.Blue, outputRect);
+            g.FillEllipse(Brushes.DodgerBlue, outputRect);
+            g.DrawEllipse(Pens.DarkBlue, outputRect);
             
-            // Input point (top)
+            // Input point (top) - more visible
             var inputPoint = new Point(center.X, block.Y);
             var inputRect = new Rectangle(inputPoint.X - pointSize/2, inputPoint.Y - pointSize/2, pointSize, pointSize);
-            g.FillEllipse(Brushes.Green, inputRect);
+            g.FillEllipse(Brushes.LimeGreen, inputRect);
+            g.DrawEllipse(Pens.DarkGreen, inputRect);
         }
 
         private void DrawConnections(Graphics g)
@@ -435,26 +437,142 @@ namespace PyClickerRecorder.Workflow
                 _ => Color.White
             };
         }
-        
-        // Helper method to identify hidden variables
-        private bool IsHiddenVariable(WorkflowBlock block)
-        {
-            return block is VariableBlock variableBlock && 
-                   variableBlock.Source == VariableSource.Value &&
-                   variableBlock.X < 0 && 
-                   variableBlock.Y < 0;
-        }
 
         private WorkflowBlock? GetBlockAtPosition(Point position)
         {
-            return _currentWorkflow.Blocks
-                .Where(b => !IsHiddenVariable(b)) // Skip hidden variables
+            // Check all blocks, including those that might be in conditional branches
+            var allBlocks = GetAllAccessibleBlocks();
+            return allBlocks
                 .FirstOrDefault(b => new Rectangle(b.X, b.Y, BlockWidth, BlockHeight).Contains(position));
+        }
+        
+        private List<WorkflowBlock> GetAllAccessibleBlocks()
+        {
+            var allBlocks = new List<WorkflowBlock>();
+            
+            // Add all main workflow blocks
+            allBlocks.AddRange(_currentWorkflow.Blocks);
+            
+            // Add blocks that might be referenced in conditionals but not in main list
+            foreach (var block in _currentWorkflow.Blocks.OfType<ConditionalBlock>())
+            {
+                // Add blocks from TrueBlocks that aren't already included
+                foreach (var trueBlockId in block.TrueBlocks)
+                {
+                    var trueBlock = _currentWorkflow.Blocks.FirstOrDefault(b => b.Id == trueBlockId);
+                    if (trueBlock != null && !allBlocks.Contains(trueBlock))
+                    {
+                        allBlocks.Add(trueBlock);
+                    }
+                }
+                
+                // Add blocks from FalseBlocks that aren't already included
+                foreach (var falseBlockId in block.FalseBlocks)
+                {
+                    var falseBlock = _currentWorkflow.Blocks.FirstOrDefault(b => b.Id == falseBlockId);
+                    if (falseBlock != null && !allBlocks.Contains(falseBlock))
+                    {
+                        allBlocks.Add(falseBlock);
+                    }
+                }
+                
+                // Add legacy single blocks
+                if (!string.IsNullOrEmpty(block.TrueBlock))
+                {
+                    var trueBlock = _currentWorkflow.Blocks.FirstOrDefault(b => b.Id == block.TrueBlock);
+                    if (trueBlock != null && !allBlocks.Contains(trueBlock))
+                    {
+                        allBlocks.Add(trueBlock);
+                    }
+                }
+                
+                if (!string.IsNullOrEmpty(block.FalseBlock))
+                {
+                    var falseBlock = _currentWorkflow.Blocks.FirstOrDefault(b => b.Id == block.FalseBlock);
+                    if (falseBlock != null && !allBlocks.Contains(falseBlock))
+                    {
+                        allBlocks.Add(falseBlock);
+                    }
+                }
+            }
+            
+            return allBlocks;
         }
 
         private Point GetBlockCenter(WorkflowBlock block)
         {
             return new Point(block.X + BlockWidth / 2, block.Y + BlockHeight / 2);
+        }
+        
+        private void ArrangeNewBlock(WorkflowBlock newBlock)
+        {
+            var allExistingBlocks = GetAllAccessibleBlocks();
+            
+            // Start with a default position
+            int startX = CanvasMargin;
+            int startY = CanvasMargin;
+            
+            // If there are existing blocks, try to place it in a good spot
+            if (allExistingBlocks.Count > 0)
+            {
+                // Try to place it in the next logical position
+                var lastBlock = allExistingBlocks.OrderBy(b => b.X).ThenBy(b => b.Y).LastOrDefault();
+                if (lastBlock != null)
+                {
+                    // Place it to the right of the last block
+                    startX = lastBlock.X + BlockWidth + 50;
+                    startY = lastBlock.Y;
+                    
+                    // If it would go off screen or overlap, move to next row
+                    if (startX + BlockWidth > this.ClientSize.Width - CanvasMargin)
+                    {
+                        startX = CanvasMargin;
+                        startY = lastBlock.Y + BlockHeight + 50;
+                    }
+                }
+            }
+            
+            // Ensure the position doesn't conflict with existing blocks
+            var finalPosition = FindNonOverlappingPosition(startX, startY, allExistingBlocks);
+            newBlock.X = SnapToGrid(finalPosition.X);
+            newBlock.Y = SnapToGrid(finalPosition.Y);
+        }
+        
+        private Point FindNonOverlappingPosition(int startX, int startY, List<WorkflowBlock> existingBlocks)
+        {
+            int x = startX;
+            int y = startY;
+            int spacing = BlockWidth + 30;
+            int maxAttempts = 20;
+            int attempts = 0;
+            
+            while (attempts < maxAttempts)
+            {
+                var testRect = new Rectangle(x, y, BlockWidth, BlockHeight);
+                bool overlaps = existingBlocks.Any(b => 
+                {
+                    var blockRect = new Rectangle(b.X, b.Y, BlockWidth, BlockHeight);
+                    return blockRect.IntersectsWith(testRect);
+                });
+                
+                if (!overlaps)
+                {
+                    return new Point(x, y);
+                }
+                
+                // Try next position
+                x += spacing;
+                if (x + BlockWidth > this.ClientSize.Width - CanvasMargin)
+                {
+                    x = CanvasMargin;
+                    y += BlockHeight + 30;
+                }
+                
+                attempts++;
+            }
+            
+            // If we can't find a good spot, just use the original position
+            return new Point(startX, startY);
         }
 
         private int SnapToGrid(int value)
@@ -464,24 +582,62 @@ namespace PyClickerRecorder.Workflow
 
         private void ShowContextMenu(WorkflowBlock block, Point location)
         {
+            System.Diagnostics.Debug.WriteLine($"ShowContextMenu called for block: {block.Name} at {location}");
+            
             var contextMenu = new ContextMenuStrip();
             
             var editItem = new ToolStripMenuItem("Edit Properties");
-            editItem.Click += (s, e) => EditBlockProperties(block);
+            editItem.Click += (s, e) => {
+                System.Diagnostics.Debug.WriteLine($"Edit Properties clicked for {block.Name}");
+                EditBlockProperties(block);
+            };
             contextMenu.Items.Add(editItem);
             
             var deleteItem = new ToolStripMenuItem("Delete");
-            deleteItem.Click += (s, e) => DeleteBlock(block);
+            deleteItem.Click += (s, e) => {
+                System.Diagnostics.Debug.WriteLine($"Delete clicked for {block.Name}");
+                DeleteBlock(block);
+            };
             contextMenu.Items.Add(deleteItem);
             
             if (block.Id != _currentWorkflow.StartBlockId)
             {
                 var setStartItem = new ToolStripMenuItem("Set as Start Block");
-                setStartItem.Click += (s, e) => SetStartBlock(block);
+                setStartItem.Click += (s, e) => {
+                    System.Diagnostics.Debug.WriteLine($"Set as Start Block clicked for {block.Name}");
+                    SetStartBlock(block);
+                };
                 contextMenu.Items.Add(setStartItem);
             }
             
-            contextMenu.Show(this, location);
+            // Convert to screen coordinates
+            var screenLocation = this.PointToScreen(location);
+            System.Diagnostics.Debug.WriteLine($"Showing context menu at screen coordinates: {screenLocation}");
+            contextMenu.Show(screenLocation);
+        }
+
+        private void Canvas_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine($"Double click at {e.Location}");
+            
+            // Prevent any default behavior that might copy text
+            var clickedBlock = GetBlockAtPosition(e.Location);
+            if (clickedBlock != null)
+            {
+                System.Diagnostics.Debug.WriteLine($"Double clicking block: {clickedBlock.Name}");
+                
+                // Clear any potential clipboard interference
+                try
+                {
+                    // Don't use the clipboard at all during double-click
+                    System.Diagnostics.Debug.WriteLine("Opening properties for block");
+                    EditBlockProperties(clickedBlock);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Error in double-click handler: {ex.Message}");
+                }
+            }
         }
 
         private void Canvas_KeyDown(object sender, KeyEventArgs e)
@@ -601,38 +757,6 @@ namespace PyClickerRecorder.Workflow
             // This would integrate with the main form's workflow execution
             this.DialogResult = DialogResult.OK;
             this.Close();
-        }
-        
-        private void ManageHiddenVariables_Click(object sender, EventArgs e)
-        {
-            var hiddenVariables = _currentWorkflow.HiddenVariables ?? new List<VariableBlock>();
-                
-            if (!hiddenVariables.Any())
-            {
-                MessageBox.Show("No hidden variables found in this workflow.", "Hidden Variables", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            
-            var message = "Hidden Variables:\n\n";
-            foreach (var variable in hiddenVariables)
-            {
-                message += $"• {variable.VariableName}: '{variable.DirectValue}'\n";
-            }
-            message += "\nThese variables were created automatically when setting values in conditionals.";
-            
-            var result = MessageBox.Show(message + "\n\nWould you like to clean up unused hidden variables?", 
-                "Hidden Variables Manager", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                
-            if (result == DialogResult.Yes)
-            {
-                // For now, just show a message. Could implement cleanup logic later
-                MessageBox.Show("Hidden variables cleanup feature coming soon!", "Info", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
-            // Refresh the designer after managing hidden variables
-            this.Invalidate();
         }
 
         private void InitializeComponent()

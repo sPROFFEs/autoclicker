@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2025")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A tool to record and play back mouse and keyboard actions.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+e191d8d8525a9a91ad436579877badabcc23e399")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.1.0+21503c40d4bb6e279ab9bf6e20091aeeff3c892f")]
 [assembly: System.Reflection.AssemblyProductAttribute("PyClicker - Pro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PyClicker - Pro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.1.0.0")]

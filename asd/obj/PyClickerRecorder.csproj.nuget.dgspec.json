@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sdksdk\\Documents\\GitHub\\autoclicker\\asd\\PyClickerRecorder.csproj": {}
+    "C:\\Users\\sdksdk\\Documents\\GitHub\\PyClickerRecorder\\CSharpProject\\PyClickerRecorder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sdksdk\\Documents\\GitHub\\autoclicker\\asd\\PyClickerRecorder.csproj": {
+    "C:\\Users\\sdksdk\\Documents\\GitHub\\PyClickerRecorder\\CSharpProject\\PyClickerRecorder.csproj": {
       "version": "1.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sdksdk\\Documents\\GitHub\\autoclicker\\asd\\PyClickerRecorder.csproj",
+        "projectUniqueName": "C:\\Users\\sdksdk\\Documents\\GitHub\\PyClickerRecorder\\CSharpProject\\PyClickerRecorder.csproj",
         "projectName": "PyClicker - Pro",
-        "projectPath": "C:\\Users\\sdksdk\\Documents\\GitHub\\autoclicker\\asd\\PyClickerRecorder.csproj",
+        "projectPath": "C:\\Users\\sdksdk\\Documents\\GitHub\\PyClickerRecorder\\CSharpProject\\PyClickerRecorder.csproj",
         "packagesPath": "C:\\Users\\sdksdk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sdksdk\\Documents\\GitHub\\autoclicker\\asd\\obj\\",
+        "outputPath": "C:\\Users\\sdksdk\\Documents\\GitHub\\PyClickerRecorder\\CSharpProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

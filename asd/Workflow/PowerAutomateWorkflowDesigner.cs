@@ -264,40 +264,41 @@ namespace PyClickerRecorder.Workflow
             };
             panel.Controls.Add(icon);
 
-            // Add title
+            // Add title - adjust width to not overlap with options button
             var title = new Label
             {
                 Text = block.Name,
                 Font = new Font("Segoe UI", 10, FontStyle.Bold),
                 Location = new Point(55, 10),
-                Size = new Size(300, 20),
+                Size = new Size(panel.Width - 100, 20), // Leave space for options button
                 BackColor = Color.Transparent
             };
             panel.Controls.Add(title);
 
-            // Add description
+            // Add description - adjust width to not overlap with options button
             var description = new Label
             {
                 Text = GetBlockDescription(block),
                 Font = new Font("Segoe UI", 8),
                 ForeColor = Color.Gray,
                 Location = new Point(55, 30),
-                Size = new Size(300, 25),
+                Size = new Size(panel.Width - 200, 25), // Leave space for options button
                 BackColor = Color.Transparent
             };
             panel.Controls.Add(description);
 
-            // Add options button
+            // Add options button - positioned relative to panel width
             var optionsButton = new Button
             {
                 Text = "⋯",
                 Font = new Font("Segoe UI", 12, FontStyle.Bold),
                 Size = new Size(30, 25),
-                Location = new Point(360, 17),
+                Location = new Point(panel.Width - 40, 17), // Position relative to panel width
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent,
                 ForeColor = Color.Gray,
-                Cursor = Cursors.Hand
+                Cursor = Cursors.Hand,
+                Anchor = AnchorStyles.Top | AnchorStyles.Right // Anchor to top-right
             };
             optionsButton.FlatAppearance.BorderSize = 0;
             optionsButton.Click += (s, e) => ShowBlockOptions(block, optionsButton);
@@ -441,9 +442,9 @@ namespace PyClickerRecorder.Workflow
 
                     var blockControl = CreateBlockControl(block);
                     blockControl.Location = new Point(0, yPos);
-                    blockControl.Size = new Size(350, 50); // Smaller for nested blocks
+                    blockControl.Size = new Size(350, 60); // Normal size for visibility and context menu
                     contentArea.Controls.Add(blockControl);
-                    yPos += 60;
+                    yPos += 70;
                 }
             }
 

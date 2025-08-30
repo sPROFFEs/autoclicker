@@ -42,6 +42,16 @@ namespace PyClickerRecorder.Workflow
                 StartTime = DateTime.Now,
                 IsRunning = true
             };
+            
+            // Initialize workflow variables
+            if (context.Workflow.Variables != null)
+            {
+                foreach (var workflowVar in context.Workflow.Variables)
+                {
+                    context.Variables[workflowVar.Key] = workflowVar.Value.Value;
+                }
+            }
+            
             _executionContexts[workflow.Id] = context;
 
             OnWorkflowStatusChanged(new WorkflowStatusEventArgs(workflow.Id, WorkflowStatus.Started, null));
@@ -374,13 +384,13 @@ namespace PyClickerRecorder.Workflow
                     System.Diagnostics.Debug.WriteLine($"  {kvp.Key} = '{kvp.Value}'");
                 }
                 
-                // Get left value
-                string leftValue = await GetVariableValue(context, conditionalBlock.LeftSource, conditionalBlock.LeftValue);
-                System.Diagnostics.Debug.WriteLine($"Left value resolved to: '{leftValue}' (Length: {leftValue?.Length})");
+                // Get left value using unified method
+                string leftValue = await GetConditionalValue(context, conditionalBlock.LeftSource, conditionalBlock.LeftValue, conditionalBlock.LeftStaticValue);
+                System.Diagnostics.Debug.WriteLine($"Left value resolved: '{leftValue}' from {conditionalBlock.LeftSource}");
                 
-                // Get right value
-                string rightValue = await GetVariableValue(context, conditionalBlock.RightSource, conditionalBlock.RightValue);
-                System.Diagnostics.Debug.WriteLine($"Right value resolved to: '{rightValue}' (Length: {rightValue?.Length})");
+                // Get right value using unified method
+                string rightValue = await GetConditionalValue(context, conditionalBlock.RightSource, conditionalBlock.RightValue, conditionalBlock.RightStaticValue);
+                System.Diagnostics.Debug.WriteLine($"Right value resolved: '{rightValue}' from {conditionalBlock.RightSource}");
 
                 // Handle special cases
                 if (conditionalBlock.ConditionType == ConditionType.Always) 
@@ -415,30 +425,17 @@ namespace PyClickerRecorder.Workflow
                     System.Diagnostics.Debug.WriteLine($"String.Equals result: {leftCompare.Equals(rightCompare)}");
                 }
 
-                // Evaluate condition
+                // Evaluate condition - simplified and consistent
                 bool result = conditionalBlock.ConditionType switch
                 {
                     ConditionType.Equals => leftCompare.Equals(rightCompare),
                     ConditionType.NotEquals => !leftCompare.Equals(rightCompare),
                     ConditionType.Contains => leftCompare.Contains(rightCompare),
                     ConditionType.NotContains => !leftCompare.Contains(rightCompare),
-                    ConditionType.StartsWith => leftCompare.StartsWith(rightCompare),
-                    ConditionType.EndsWith => leftCompare.EndsWith(rightCompare),
                     ConditionType.GreaterThan => CompareNumeric(leftValue, rightValue) > 0,
                     ConditionType.LessThan => CompareNumeric(leftValue, rightValue) < 0,
-                    ConditionType.GreaterThanOrEqual => CompareNumeric(leftValue, rightValue) >= 0,
-                    ConditionType.LessThanOrEqual => CompareNumeric(leftValue, rightValue) <= 0,
                     ConditionType.IsEmpty => string.IsNullOrEmpty(leftValue),
                     ConditionType.IsNotEmpty => !string.IsNullOrEmpty(leftValue),
-                    ConditionType.MatchesRegex => Regex.IsMatch(leftValue, rightValue),
-                    
-                    // Legacy support
-                    ConditionType.ClipboardContains or ConditionType.WindowTitleContains or ConditionType.VariableContains => 
-                        leftCompare.Contains(rightCompare),
-                    ConditionType.ClipboardEquals or ConditionType.WindowTitleEquals or ConditionType.VariableEquals => 
-                        leftCompare.Equals(rightCompare),
-                    ConditionType.ClipboardMatches => 
-                        Regex.IsMatch(leftValue, rightValue),
                     _ => false
                 };
 
@@ -463,6 +460,57 @@ namespace PyClickerRecorder.Workflow
                    value == "Enter prompt text";
         }
         
+        // Unified method to get conditional values consistently
+        private async Task<string> GetConditionalValue(WorkflowExecutionContext context, VariableSource source, string value, string staticValue)
+        {
+            try
+            {
+                System.Diagnostics.Debug.WriteLine($"GetConditionalValue: source={source}, value='{value}', staticValue='{staticValue}'");
+                
+                switch (source)
+                {
+                    case VariableSource.Value:
+                        // For Value source, use the static value directly
+                        var result = staticValue ?? "";
+                        System.Diagnostics.Debug.WriteLine($"Using static value: '{result}'");
+                        return result;
+                        
+                    case VariableSource.Variable:
+                        // For Variable source, look up in context
+                        if (context.Variables.TryGetValue(value ?? "", out var varValue))
+                        {
+                            var variableResult = varValue?.ToString() ?? "";
+                            System.Diagnostics.Debug.WriteLine($"Found variable '{value}': '{variableResult}'");
+                            return variableResult;
+                        }
+                        else
+                        {
+                            System.Diagnostics.Debug.WriteLine($"Variable '{value}' not found, returning empty");
+                            return "";
+                        }
+                        
+                    case VariableSource.Clipboard:
+                        var clipboardResult = await GetClipboardTextAsync() ?? "";
+                        System.Diagnostics.Debug.WriteLine($"Clipboard content: '{clipboardResult}'");
+                        return clipboardResult;
+                        
+                    case VariableSource.WindowTitle:
+                        var windowResult = GetActiveWindowTitle() ?? "";
+                        System.Diagnostics.Debug.WriteLine($"Window title: '{windowResult}'");
+                        return windowResult;
+                        
+                    default:
+                        System.Diagnostics.Debug.WriteLine($"Unknown source type: {source}");
+                        return "";
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error in GetConditionalValue: {ex.Message}");
+                return "";
+            }
+        }
+        
         private async Task<string> GetVariableValue(WorkflowExecutionContext context, VariableSource source, string value)
         {
             try
@@ -480,28 +528,17 @@ namespace PyClickerRecorder.Workflow
                         if (context.Variables.TryGetValue(value ?? "", out var varValue))
                         {
                             result = varValue?.ToString() ?? "";
-                            System.Diagnostics.Debug.WriteLine($"Variable '{value}' found in context with value '{result}'");
                         }
                         else
                         {
-                            // Also check hidden variables
-                            var hiddenVar = context.Workflow.HiddenVariables?.FirstOrDefault(v => v.VariableName == value);
-                            if (hiddenVar != null)
-                            {
-                                result = hiddenVar.DirectValue ?? "";
-                                System.Diagnostics.Debug.WriteLine($"Hidden variable '{value}' found with value '{result}'");
-                            }
-                            else
-                            {
-                                System.Diagnostics.Debug.WriteLine($"Variable '{value}' not found in context or hidden variables");
-                                result = "";
-                            }
+                            System.Diagnostics.Debug.WriteLine($"Variable '{value}' not found in context");
+                            result = "";
                         }
                         break;
                     case VariableSource.Value:
-                        // For direct values, use them exactly as stored
+                        // For Value source, use the value directly
                         result = value ?? "";
-                        System.Diagnostics.Debug.WriteLine($"GetVariableValue: Using direct value '{result}' exactly as stored");
+                        System.Diagnostics.Debug.WriteLine($"GetVariableValue: Using static value '{result}'");
                         break;
                     default:
                         result = "";
@@ -605,6 +642,7 @@ namespace PyClickerRecorder.Workflow
                 }
             }
         }
+
 
         protected virtual void OnWorkflowStatusChanged(WorkflowStatusEventArgs e)
         {
