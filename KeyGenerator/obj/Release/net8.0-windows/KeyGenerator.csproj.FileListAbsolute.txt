@@ -1,0 +1,15 @@
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\bin\Release\net8.0-windows\KeyGenerator.exe
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\bin\Release\net8.0-windows\KeyGenerator.deps.json
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\bin\Release\net8.0-windows\KeyGenerator.runtimeconfig.json
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\bin\Release\net8.0-windows\KeyGenerator.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\bin\Release\net8.0-windows\KeyGenerator.pdb
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.AssemblyInfoInputs.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.AssemblyInfo.cs
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.csproj.CoreCompileInputs.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.sourcelink.json
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\refint\KeyGenerator.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.pdb
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\KeyGenerator.genruntimeconfig.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\KeyGenerator\obj\Release\net8.0-windows\ref\KeyGenerator.dll
