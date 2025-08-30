@@ -675,6 +675,8 @@ namespace PyClickerRecorder.Workflow
 
         private void CreateVariableBlockControls(ref int yOffset)
         {
+            _nameTextBox.ReadOnly = true;
+
             // Variable name (will sync with block name)
             var nameLabel = new Label
             {
