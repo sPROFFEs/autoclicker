@@ -1,0 +1,21 @@
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\Gma.System.MouseKeyHook.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\System.Management.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.csproj.AssemblyReference.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.AssemblyInfoInputs.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.AssemblyInfo.cs
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.csproj.CoreCompileInputs.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.sourcelink.json
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClicke.4E245521.Up2Date
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.genruntimeconfig.cache
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\PyClicker - Pro.exe
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\PyClicker - Pro.deps.json
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\PyClicker - Pro.runtimeconfig.json
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\PyClicker - Pro.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\bin\Release\net8.0-windows\win-x64\PyClicker - Pro.pdb
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClicker - Pro.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\refint\PyClicker - Pro.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClicker - Pro.pdb
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\ref\PyClicker - Pro.dll
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.MainForm.resources
+C:\Users\sdksdk\Documents\GitHub\PyClickerRecorder\CSharpProject\obj\Release\net8.0-windows\win-x64\PyClickerRecorder.csproj.GenerateResource.cache

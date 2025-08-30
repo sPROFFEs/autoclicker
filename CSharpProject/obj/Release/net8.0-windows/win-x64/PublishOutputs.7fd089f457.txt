@@ -1,0 +1,7 @@
+C:\Users\sdksdk\Desktop\PyClicker\PyClicker - Pro.pdb
+C:\Users\sdksdk\Desktop\PyClicker\D3DCompiler_47_cor3.dll
+C:\Users\sdksdk\Desktop\PyClicker\PenImc_cor3.dll
+C:\Users\sdksdk\Desktop\PyClicker\PresentationNative_cor3.dll
+C:\Users\sdksdk\Desktop\PyClicker\vcruntime140_cor3.dll
+C:\Users\sdksdk\Desktop\PyClicker\wpfgfx_cor3.dll
+C:\Users\sdksdk\Desktop\PyClicker\PyClicker - Pro.exe

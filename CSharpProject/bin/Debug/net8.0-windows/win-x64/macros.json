@@ -1,0 +1,8039 @@
+[
+  {
+    "Name": "start test",
+    "Actions": [
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1402,
+          "Y": 322
+        },
+        "TimeOffset": 0.0634472
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01431170000000001,
+        "TimeOffset": 0.0777589
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1399,
+          "Y": 322
+        },
+        "TimeOffset": 0.0777589
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01596059999999999,
+        "TimeOffset": 0.0937195
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1396,
+          "Y": 324
+        },
+        "TimeOffset": 0.0937195
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080852,
+        "TimeOffset": 0.1018047
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1394,
+          "Y": 325
+        },
+        "TimeOffset": 0.1018047
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007901600000000009,
+        "TimeOffset": 0.1097063
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1392,
+          "Y": 326
+        },
+        "TimeOffset": 0.1097063
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007944699999999999,
+        "TimeOffset": 0.117651
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1390,
+          "Y": 327
+        },
+        "TimeOffset": 0.117651
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007995799999999997,
+        "TimeOffset": 0.1256468
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1388,
+          "Y": 329
+        },
+        "TimeOffset": 0.1256468
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00798950000000001,
+        "TimeOffset": 0.1336363
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1385,
+          "Y": 330
+        },
+        "TimeOffset": 0.1336363
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00804479999999999,
+        "TimeOffset": 0.1416811
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1383,
+          "Y": 331
+        },
+        "TimeOffset": 0.1416811
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008074599999999987,
+        "TimeOffset": 0.1497557
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1381,
+          "Y": 332
+        },
+        "TimeOffset": 0.1497557
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00787210000000002,
+        "TimeOffset": 0.1576278
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1379,
+          "Y": 333
+        },
+        "TimeOffset": 0.1576278
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007973099999999983,
+        "TimeOffset": 0.1656009
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1377,
+          "Y": 334
+        },
+        "TimeOffset": 0.1656009
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015991900000000003,
+        "TimeOffset": 0.1815928
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1375,
+          "Y": 335
+        },
+        "TimeOffset": 0.1815928
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.02407580000000001,
+        "TimeOffset": 0.2056686
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1373,
+          "Y": 338
+        },
+        "TimeOffset": 0.2056686
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024130399999999996,
+        "TimeOffset": 0.229799
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1372,
+          "Y": 340
+        },
+        "TimeOffset": 0.229799
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01583989999999999,
+        "TimeOffset": 0.2456389
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1371,
+          "Y": 342
+        },
+        "TimeOffset": 0.2456389
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01598060000000001,
+        "TimeOffset": 0.2616195
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1371,
+          "Y": 344
+        },
+        "TimeOffset": 0.2616195
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016032900000000017,
+        "TimeOffset": 0.2776524
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1370,
+          "Y": 346
+        },
+        "TimeOffset": 0.2776524
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00801449999999998,
+        "TimeOffset": 0.2856669
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1370,
+          "Y": 348
+        },
+        "TimeOffset": 0.2856669
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01592460000000001,
+        "TimeOffset": 0.3015915
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1370,
+          "Y": 350
+        },
+        "TimeOffset": 0.3015915
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01610729999999999,
+        "TimeOffset": 0.3176988
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1369,
+          "Y": 353
+        },
+        "TimeOffset": 0.3176988
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016210400000000014,
+        "TimeOffset": 0.3339092
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1369,
+          "Y": 355
+        },
+        "TimeOffset": 0.3339092
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0557299,
+        "TimeOffset": 0.3896391
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1369,
+          "Y": 357
+        },
+        "TimeOffset": 0.3896391
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.031998799999999994,
+        "TimeOffset": 0.4216379
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1369,
+          "Y": 359
+        },
+        "TimeOffset": 0.4216379
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016019000000000005,
+        "TimeOffset": 0.4376569
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1368,
+          "Y": 361
+        },
+        "TimeOffset": 0.4376569
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024105500000000002,
+        "TimeOffset": 0.4617624
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1368,
+          "Y": 363
+        },
+        "TimeOffset": 0.4617624
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.04789409999999994,
+        "TimeOffset": 0.5096565
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1368,
+          "Y": 365
+        },
+        "TimeOffset": 0.5096565
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.040029300000000045,
+        "TimeOffset": 0.5496858
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1367,
+          "Y": 367
+        },
+        "TimeOffset": 0.5496858
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.023980800000000024,
+        "TimeOffset": 0.5736666
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1367,
+          "Y": 369
+        },
+        "TimeOffset": 0.5736666
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.16303919999999994,
+        "TimeOffset": 0.7367058
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1367,
+          "Y": 369
+        },
+        "Button": "Right",
+        "State": "Down",
+        "TimeOffset": 0.7367058
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.1335845,
+        "TimeOffset": 0.8702903
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1367,
+          "Y": 369
+        },
+        "Button": "Right",
+        "State": "Up",
+        "TimeOffset": 0.8702903
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.8316549,
+        "TimeOffset": 1.7019452
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1367,
+          "Y": 373
+        },
+        "TimeOffset": 1.7019452
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007714699999999963,
+        "TimeOffset": 1.7096599
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1369,
+          "Y": 376
+        },
+        "TimeOffset": 1.7096599
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008138600000000107,
+        "TimeOffset": 1.7177985
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1369,
+          "Y": 379
+        },
+        "TimeOffset": 1.7177985
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007883700000000049,
+        "TimeOffset": 1.7256822
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1371,
+          "Y": 382
+        },
+        "TimeOffset": 1.7256822
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00811929999999994,
+        "TimeOffset": 1.7338015
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1373,
+          "Y": 387
+        },
+        "TimeOffset": 1.7338015
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007835500000000106,
+        "TimeOffset": 1.741637
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1375,
+          "Y": 392
+        },
+        "TimeOffset": 1.741637
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008022799999999997,
+        "TimeOffset": 1.7496598
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1378,
+          "Y": 398
+        },
+        "TimeOffset": 1.7496598
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008394000000000013,
+        "TimeOffset": 1.7580538
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1380,
+          "Y": 404
+        },
+        "TimeOffset": 1.7580538
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007770999999999972,
+        "TimeOffset": 1.7658248
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1383,
+          "Y": 411
+        },
+        "TimeOffset": 1.7658248
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00781749999999981,
+        "TimeOffset": 1.7736423
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1386,
+          "Y": 418
+        },
+        "TimeOffset": 1.7736423
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008904100000000081,
+        "TimeOffset": 1.7825464
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1389,
+          "Y": 426
+        },
+        "TimeOffset": 1.7825464
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007125000000000048,
+        "TimeOffset": 1.7896714
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1392,
+          "Y": 431
+        },
+        "TimeOffset": 1.7896714
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008296000000000081,
+        "TimeOffset": 1.7979674
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1395,
+          "Y": 439
+        },
+        "TimeOffset": 1.7979674
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007701799999999981,
+        "TimeOffset": 1.8056692
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1398,
+          "Y": 444
+        },
+        "TimeOffset": 1.8056692
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00810069999999996,
+        "TimeOffset": 1.8137699
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1401,
+          "Y": 450
+        },
+        "TimeOffset": 1.8137699
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007897700000000007,
+        "TimeOffset": 1.8216676
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1404,
+          "Y": 456
+        },
+        "TimeOffset": 1.8216676
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008254899999999843,
+        "TimeOffset": 1.8299225
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1407,
+          "Y": 462
+        },
+        "TimeOffset": 1.8299225
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007731200000000049,
+        "TimeOffset": 1.8376537
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1410,
+          "Y": 468
+        },
+        "TimeOffset": 1.8376537
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008133399999999957,
+        "TimeOffset": 1.8457871
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1412,
+          "Y": 474
+        },
+        "TimeOffset": 1.8457871
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008053800000000111,
+        "TimeOffset": 1.8538409
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1413,
+          "Y": 478
+        },
+        "TimeOffset": 1.8538409
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007792699999999986,
+        "TimeOffset": 1.8616336
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1415,
+          "Y": 482
+        },
+        "TimeOffset": 1.8616336
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008053499999999936,
+        "TimeOffset": 1.8696871
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1417,
+          "Y": 485
+        },
+        "TimeOffset": 1.8696871
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008096100000000162,
+        "TimeOffset": 1.8777832
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1418,
+          "Y": 487
+        },
+        "TimeOffset": 1.8777832
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007938199999999895,
+        "TimeOffset": 1.8857214
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1419,
+          "Y": 489
+        },
+        "TimeOffset": 1.8857214
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008118099999999906,
+        "TimeOffset": 1.8938395
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1420,
+          "Y": 491
+        },
+        "TimeOffset": 1.8938395
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007958000000000132,
+        "TimeOffset": 1.9017975
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1422,
+          "Y": 493
+        },
+        "TimeOffset": 1.9017975
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00789289999999987,
+        "TimeOffset": 1.9096904
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1423,
+          "Y": 495
+        },
+        "TimeOffset": 1.9096904
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008086700000000002,
+        "TimeOffset": 1.9177771
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1423,
+          "Y": 497
+        },
+        "TimeOffset": 1.9177771
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007921200000000184,
+        "TimeOffset": 1.9256983
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1424,
+          "Y": 500
+        },
+        "TimeOffset": 1.9256983
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008027199999999901,
+        "TimeOffset": 1.9337255
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1425,
+          "Y": 502
+        },
+        "TimeOffset": 1.9337255
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00791659999999994,
+        "TimeOffset": 1.9416421
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1426,
+          "Y": 504
+        },
+        "TimeOffset": 1.9416421
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008192500000000047,
+        "TimeOffset": 1.9498346
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1427,
+          "Y": 506
+        },
+        "TimeOffset": 1.9498346
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007870299999999997,
+        "TimeOffset": 1.9577049
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1428,
+          "Y": 509
+        },
+        "TimeOffset": 1.9577049
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008116800000000035,
+        "TimeOffset": 1.9658217
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1429,
+          "Y": 512
+        },
+        "TimeOffset": 1.9658217
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007978800000000064,
+        "TimeOffset": 1.9738005
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1429,
+          "Y": 516
+        },
+        "TimeOffset": 1.9738005
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007842600000000033,
+        "TimeOffset": 1.9816431
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1431,
+          "Y": 519
+        },
+        "TimeOffset": 1.9816431
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008075699999999797,
+        "TimeOffset": 1.9897188
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1432,
+          "Y": 521
+        },
+        "TimeOffset": 1.9897188
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00806590000000007,
+        "TimeOffset": 1.9977847
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1432,
+          "Y": 524
+        },
+        "TimeOffset": 1.9977847
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007861500000000188,
+        "TimeOffset": 2.0056462
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1433,
+          "Y": 526
+        },
+        "TimeOffset": 2.0056462
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008121799999999624,
+        "TimeOffset": 2.013768
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1434,
+          "Y": 528
+        },
+        "TimeOffset": 2.013768
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007917200000000069,
+        "TimeOffset": 2.0216852
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1435,
+          "Y": 531
+        },
+        "TimeOffset": 2.0216852
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008067700000000233,
+        "TimeOffset": 2.0297529
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1435,
+          "Y": 533
+        },
+        "TimeOffset": 2.0297529
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007931300000000086,
+        "TimeOffset": 2.0376842
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1436,
+          "Y": 535
+        },
+        "TimeOffset": 2.0376842
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008113299999999768,
+        "TimeOffset": 2.0457975
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1436,
+          "Y": 538
+        },
+        "TimeOffset": 2.0457975
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0078646,
+        "TimeOffset": 2.0536621
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1437,
+          "Y": 540
+        },
+        "TimeOffset": 2.0536621
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008086700000000224,
+        "TimeOffset": 2.0617488
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1437,
+          "Y": 542
+        },
+        "TimeOffset": 2.0617488
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007928900000000016,
+        "TimeOffset": 2.0696777
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1438,
+          "Y": 545
+        },
+        "TimeOffset": 2.0696777
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016032099999999883,
+        "TimeOffset": 2.0857098
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1438,
+          "Y": 547
+        },
+        "TimeOffset": 2.0857098
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00804260000000001,
+        "TimeOffset": 2.0937524
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1438,
+          "Y": 549
+        },
+        "TimeOffset": 2.0937524
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.03193760000000001,
+        "TimeOffset": 2.12569
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1438,
+          "Y": 551
+        },
+        "TimeOffset": 2.12569
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008007099999999934,
+        "TimeOffset": 2.1336971
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 553
+        },
+        "TimeOffset": 2.1336971
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016052499999999803,
+        "TimeOffset": 2.1497496
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 555
+        },
+        "TimeOffset": 2.1497496
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024029700000000265,
+        "TimeOffset": 2.1737793
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 558
+        },
+        "TimeOffset": 2.1737793
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.02406449999999971,
+        "TimeOffset": 2.1978438
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 560
+        },
+        "TimeOffset": 2.1978438
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.02380620000000011,
+        "TimeOffset": 2.22165
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 562
+        },
+        "TimeOffset": 2.22165
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.032001600000000074,
+        "TimeOffset": 2.2536516
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 564
+        },
+        "TimeOffset": 2.2536516
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.12013980000000002,
+        "TimeOffset": 2.3737914
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 566
+        },
+        "TimeOffset": 2.3737914
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.031905300000000025,
+        "TimeOffset": 2.4056967
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 568
+        },
+        "TimeOffset": 2.4056967
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01604569999999983,
+        "TimeOffset": 2.4217424
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 570
+        },
+        "TimeOffset": 2.4217424
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.04876220000000009,
+        "TimeOffset": 2.4705046
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 570
+        },
+        "Button": "Left",
+        "State": "Down",
+        "TimeOffset": 2.4705046
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.1753844,
+        "TimeOffset": 2.645889
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1439,
+          "Y": 570
+        },
+        "Button": "Left",
+        "State": "Up",
+        "TimeOffset": 2.645889
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.3118311,
+        "TimeOffset": 2.9577201
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1440,
+          "Y": 572
+        },
+        "TimeOffset": 2.9577201
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008040799999999848,
+        "TimeOffset": 2.9657609
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1443,
+          "Y": 572
+        },
+        "TimeOffset": 2.9657609
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007968400000000209,
+        "TimeOffset": 2.9737293
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1446,
+          "Y": 573
+        },
+        "TimeOffset": 2.9737293
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007975399999999855,
+        "TimeOffset": 2.9817047
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1449,
+          "Y": 574
+        },
+        "TimeOffset": 2.9817047
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007992200000000338,
+        "TimeOffset": 2.9896969
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1453,
+          "Y": 575
+        },
+        "TimeOffset": 2.9896969
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008158499999999957,
+        "TimeOffset": 2.9978554
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1459,
+          "Y": 576
+        },
+        "TimeOffset": 2.9978554
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007927999999999713,
+        "TimeOffset": 3.0057834
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1464,
+          "Y": 576
+        },
+        "TimeOffset": 3.0057834
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007913800000000304,
+        "TimeOffset": 3.0136972
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1472,
+          "Y": 577
+        },
+        "TimeOffset": 3.0136972
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008011999999999908,
+        "TimeOffset": 3.0217092
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1480,
+          "Y": 578
+        },
+        "TimeOffset": 3.0217092
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008012299999999861,
+        "TimeOffset": 3.0297215
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1490,
+          "Y": 578
+        },
+        "TimeOffset": 3.0297215
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007987899999999826,
+        "TimeOffset": 3.0377094
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1498,
+          "Y": 579
+        },
+        "TimeOffset": 3.0377094
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008099300000000031,
+        "TimeOffset": 3.0458087
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1506,
+          "Y": 580
+        },
+        "TimeOffset": 3.0458087
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00793030000000039,
+        "TimeOffset": 3.053739
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1514,
+          "Y": 580
+        },
+        "TimeOffset": 3.053739
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007990799999999965,
+        "TimeOffset": 3.0617298
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1522,
+          "Y": 581
+        },
+        "TimeOffset": 3.0617298
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008112299999999628,
+        "TimeOffset": 3.0698421
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1531,
+          "Y": 582
+        },
+        "TimeOffset": 3.0698421
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00789250000000008,
+        "TimeOffset": 3.0777346
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1539,
+          "Y": 583
+        },
+        "TimeOffset": 3.0777346
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00795260000000031,
+        "TimeOffset": 3.0856872
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1547,
+          "Y": 583
+        },
+        "TimeOffset": 3.0856872
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00815969999999977,
+        "TimeOffset": 3.0938469
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1555,
+          "Y": 584
+        },
+        "TimeOffset": 3.0938469
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007928999999999853,
+        "TimeOffset": 3.1017759
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1562,
+          "Y": 584
+        },
+        "TimeOffset": 3.1017759
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007984100000000272,
+        "TimeOffset": 3.10976
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1567,
+          "Y": 584
+        },
+        "TimeOffset": 3.10976
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007997699999999774,
+        "TimeOffset": 3.1177577
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1572,
+          "Y": 584
+        },
+        "TimeOffset": 3.1177577
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008128899999999994,
+        "TimeOffset": 3.1258866
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1578,
+          "Y": 584
+        },
+        "TimeOffset": 3.1258866
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007817800000000208,
+        "TimeOffset": 3.1337044
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1583,
+          "Y": 584
+        },
+        "TimeOffset": 3.1337044
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00800730000000005,
+        "TimeOffset": 3.1417117
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1589,
+          "Y": 584
+        },
+        "TimeOffset": 3.1417117
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008029699999999806,
+        "TimeOffset": 3.1497414
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1593,
+          "Y": 584
+        },
+        "TimeOffset": 3.1497414
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008132100000000086,
+        "TimeOffset": 3.1578735
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1597,
+          "Y": 584
+        },
+        "TimeOffset": 3.1578735
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007835699999999779,
+        "TimeOffset": 3.1657092
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1601,
+          "Y": 584
+        },
+        "TimeOffset": 3.1657092
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008006400000000191,
+        "TimeOffset": 3.1737156
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1604,
+          "Y": 584
+        },
+        "TimeOffset": 3.1737156
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008020300000000091,
+        "TimeOffset": 3.1817359
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1607,
+          "Y": 584
+        },
+        "TimeOffset": 3.1817359
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007969199999999788,
+        "TimeOffset": 3.1897051
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1610,
+          "Y": 584
+        },
+        "TimeOffset": 3.1897051
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008003900000000286,
+        "TimeOffset": 3.197709
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1613,
+          "Y": 583
+        },
+        "TimeOffset": 3.197709
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00803459999999978,
+        "TimeOffset": 3.2057436
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1616,
+          "Y": 583
+        },
+        "TimeOffset": 3.2057436
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008101799999999937,
+        "TimeOffset": 3.2138454
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1620,
+          "Y": 583
+        },
+        "TimeOffset": 3.2138454
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007892200000000127,
+        "TimeOffset": 3.2217376
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1626,
+          "Y": 583
+        },
+        "TimeOffset": 3.2217376
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00797189999999981,
+        "TimeOffset": 3.2297095
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1631,
+          "Y": 582
+        },
+        "TimeOffset": 3.2297095
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008114900000000258,
+        "TimeOffset": 3.2378244
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1636,
+          "Y": 581
+        },
+        "TimeOffset": 3.2378244
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007870000000000044,
+        "TimeOffset": 3.2456944
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1641,
+          "Y": 580
+        },
+        "TimeOffset": 3.2456944
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008061800000000119,
+        "TimeOffset": 3.2537562
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1645,
+          "Y": 580
+        },
+        "TimeOffset": 3.2537562
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00796349999999979,
+        "TimeOffset": 3.2617197
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1648,
+          "Y": 580
+        },
+        "TimeOffset": 3.2617197
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008016299999999976,
+        "TimeOffset": 3.269736
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1651,
+          "Y": 579
+        },
+        "TimeOffset": 3.269736
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015968299999999935,
+        "TimeOffset": 3.2857043
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1653,
+          "Y": 579
+        },
+        "TimeOffset": 3.2857043
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015996300000000296,
+        "TimeOffset": 3.3017006
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1655,
+          "Y": 579
+        },
+        "TimeOffset": 3.3017006
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016439199999999765,
+        "TimeOffset": 3.3181398
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1658,
+          "Y": 579
+        },
+        "TimeOffset": 3.3181398
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015630400000000044,
+        "TimeOffset": 3.3337702
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1660,
+          "Y": 580
+        },
+        "TimeOffset": 3.3337702
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008085400000000131,
+        "TimeOffset": 3.3418556
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1662,
+          "Y": 581
+        },
+        "TimeOffset": 3.3418556
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0078421999999998,
+        "TimeOffset": 3.3496978
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1664,
+          "Y": 581
+        },
+        "TimeOffset": 3.3496978
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01606759999999996,
+        "TimeOffset": 3.3657654
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1667,
+          "Y": 583
+        },
+        "TimeOffset": 3.3657654
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007919500000000301,
+        "TimeOffset": 3.3736849
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1669,
+          "Y": 584
+        },
+        "TimeOffset": 3.3736849
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008012599999999814,
+        "TimeOffset": 3.3816975
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1670,
+          "Y": 586
+        },
+        "TimeOffset": 3.3816975
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007997299999999985,
+        "TimeOffset": 3.3896948
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1673,
+          "Y": 587
+        },
+        "TimeOffset": 3.3896948
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008119300000000162,
+        "TimeOffset": 3.3978141
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1674,
+          "Y": 589
+        },
+        "TimeOffset": 3.3978141
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007896299999999634,
+        "TimeOffset": 3.4057104
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1676,
+          "Y": 592
+        },
+        "TimeOffset": 3.4057104
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080600000000004,
+        "TimeOffset": 3.4137704
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1678,
+          "Y": 595
+        },
+        "TimeOffset": 3.4137704
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007974199999999598,
+        "TimeOffset": 3.4217446
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1681,
+          "Y": 599
+        },
+        "TimeOffset": 3.4217446
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008087900000000037,
+        "TimeOffset": 3.4298325
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1682,
+          "Y": 603
+        },
+        "TimeOffset": 3.4298325
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007876900000000298,
+        "TimeOffset": 3.4377094
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1684,
+          "Y": 606
+        },
+        "TimeOffset": 3.4377094
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00815980000000005,
+        "TimeOffset": 3.4458692
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1686,
+          "Y": 610
+        },
+        "TimeOffset": 3.4458692
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00784180000000001,
+        "TimeOffset": 3.453711
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1686,
+          "Y": 612
+        },
+        "TimeOffset": 3.453711
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008009699999999675,
+        "TimeOffset": 3.4617207
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1687,
+          "Y": 614
+        },
+        "TimeOffset": 3.4617207
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008018499999999928,
+        "TimeOffset": 3.4697392
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1688,
+          "Y": 616
+        },
+        "TimeOffset": 3.4697392
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007981600000000366,
+        "TimeOffset": 3.4777208
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1689,
+          "Y": 618
+        },
+        "TimeOffset": 3.4777208
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008004399999999912,
+        "TimeOffset": 3.4857252
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1689,
+          "Y": 621
+        },
+        "TimeOffset": 3.4857252
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015953099999999942,
+        "TimeOffset": 3.5016783
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 623
+        },
+        "TimeOffset": 3.5016783
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008077500000000182,
+        "TimeOffset": 3.5097558
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 625
+        },
+        "TimeOffset": 3.5097558
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016076099999999816,
+        "TimeOffset": 3.5258319
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 627
+        },
+        "TimeOffset": 3.5258319
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01588719999999988,
+        "TimeOffset": 3.5417191
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 629
+        },
+        "TimeOffset": 3.5417191
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016084100000000046,
+        "TimeOffset": 3.5578032
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 631
+        },
+        "TimeOffset": 3.5578032
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015919499999999864,
+        "TimeOffset": 3.5737227
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 633
+        },
+        "TimeOffset": 3.5737227
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008067700000000233,
+        "TimeOffset": 3.5817904
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 635
+        },
+        "TimeOffset": 3.5817904
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016031599999999813,
+        "TimeOffset": 3.597822
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 637
+        },
+        "TimeOffset": 3.597822
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015892000000000017,
+        "TimeOffset": 3.613714
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 640
+        },
+        "TimeOffset": 3.613714
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016003900000000293,
+        "TimeOffset": 3.6297179
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 642
+        },
+        "TimeOffset": 3.6297179
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080811999999999,
+        "TimeOffset": 3.6377991
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 644
+        },
+        "TimeOffset": 3.6377991
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.023909999999999876,
+        "TimeOffset": 3.6617091
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 646
+        },
+        "TimeOffset": 3.6617091
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01601410000000003,
+        "TimeOffset": 3.6777232
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 648
+        },
+        "TimeOffset": 3.6777232
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0320087,
+        "TimeOffset": 3.7097319
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 650
+        },
+        "TimeOffset": 3.7097319
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.048101200000000066,
+        "TimeOffset": 3.7578331
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1690,
+          "Y": 652
+        },
+        "TimeOffset": 3.7578331
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.29621410000000026,
+        "TimeOffset": 4.0540472
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1689,
+          "Y": 653
+        },
+        "Button": "Left",
+        "State": "Down",
+        "TimeOffset": 4.0540472
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.13593049999999973,
+        "TimeOffset": 4.1899777
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1689,
+          "Y": 653
+        },
+        "Button": "Left",
+        "State": "Up",
+        "TimeOffset": 4.1899777
+      },
+      {
+        "$type": "delay",
+        "Duration": 1.1359167000000001,
+        "TimeOffset": 5.3258944
+      },
+      {
+        "$type": "key",
+        "Key": 84,
+        "Modifiers": [],
+        "State": "Press",
+        "TimeOffset": 5.3258944
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.12696660000000026,
+        "TimeOffset": 5.452861
+      },
+      {
+        "$type": "key",
+        "Key": 69,
+        "Modifiers": [],
+        "State": "Press",
+        "TimeOffset": 5.452861
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024102499999999694,
+        "TimeOffset": 5.4769635
+      },
+      {
+        "$type": "key",
+        "Key": 84,
+        "Modifiers": [],
+        "State": "Release",
+        "TimeOffset": 5.4769635
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.047857200000000155,
+        "TimeOffset": 5.5248207
+      },
+      {
+        "$type": "key",
+        "Key": 69,
+        "Modifiers": [],
+        "State": "Release",
+        "TimeOffset": 5.5248207
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.1361648999999998,
+        "TimeOffset": 5.6609856
+      },
+      {
+        "$type": "key",
+        "Key": 83,
+        "Modifiers": [],
+        "State": "Press",
+        "TimeOffset": 5.6609856
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.13601930000000007,
+        "TimeOffset": 5.7970049
+      },
+      {
+        "$type": "key",
+        "Key": 83,
+        "Modifiers": [],
+        "State": "Release",
+        "TimeOffset": 5.7970049
+      },
+      {
+        "$type": "key",
+        "Key": 84,
+        "Modifiers": [],
+        "State": "Press",
+        "TimeOffset": 5.7979922
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.11895699999999998,
+        "TimeOffset": 5.9169492
+      },
+      {
+        "$type": "key",
+        "Key": 84,
+        "Modifiers": [],
+        "State": "Release",
+        "TimeOffset": 5.9169492
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.07291029999999932,
+        "TimeOffset": 5.9898595
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1687,
+          "Y": 653
+        },
+        "TimeOffset": 5.9898595
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016001300000000107,
+        "TimeOffset": 6.0058608
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1683,
+          "Y": 653
+        },
+        "TimeOffset": 6.0058608
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007969500000000629,
+        "TimeOffset": 6.0138303
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1678,
+          "Y": 652
+        },
+        "TimeOffset": 6.0138303
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008022499999999155,
+        "TimeOffset": 6.0218528
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1671,
+          "Y": 650
+        },
+        "TimeOffset": 6.0218528
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008091200000000853,
+        "TimeOffset": 6.029944
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1663,
+          "Y": 648
+        },
+        "TimeOffset": 6.029944
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007899299999999165,
+        "TimeOffset": 6.0378433
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1655,
+          "Y": 646
+        },
+        "TimeOffset": 6.0378433
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008023700000000744,
+        "TimeOffset": 6.045867
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1645,
+          "Y": 645
+        },
+        "TimeOffset": 6.045867
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008057099999999373,
+        "TimeOffset": 6.0539241
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1634,
+          "Y": 644
+        },
+        "TimeOffset": 6.0539241
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00791680000000028,
+        "TimeOffset": 6.0618409
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1624,
+          "Y": 642
+        },
+        "TimeOffset": 6.0618409
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008199300000000243,
+        "TimeOffset": 6.0700402
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1613,
+          "Y": 641
+        },
+        "TimeOffset": 6.0700402
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007892399999999355,
+        "TimeOffset": 6.0779326
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1602,
+          "Y": 640
+        },
+        "TimeOffset": 6.0779326
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007880300000000062,
+        "TimeOffset": 6.0858129
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1592,
+          "Y": 639
+        },
+        "TimeOffset": 6.0858129
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008041700000000596,
+        "TimeOffset": 6.0938546
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1581,
+          "Y": 638
+        },
+        "TimeOffset": 6.0938546
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00800920000000005,
+        "TimeOffset": 6.1018638
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1570,
+          "Y": 637
+        },
+        "TimeOffset": 6.1018638
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00793569999999999,
+        "TimeOffset": 6.1097995
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1561,
+          "Y": 636
+        },
+        "TimeOffset": 6.1097995
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008058999999999372,
+        "TimeOffset": 6.1178585
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1551,
+          "Y": 635
+        },
+        "TimeOffset": 6.1178585
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007967999999999975,
+        "TimeOffset": 6.1258265
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1543,
+          "Y": 634
+        },
+        "TimeOffset": 6.1258265
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008157000000000636,
+        "TimeOffset": 6.1339835
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1536,
+          "Y": 634
+        },
+        "TimeOffset": 6.1339835
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007821100000000136,
+        "TimeOffset": 6.1418046
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1532,
+          "Y": 633
+        },
+        "TimeOffset": 6.1418046
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008084999999999454,
+        "TimeOffset": 6.1498896
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1529,
+          "Y": 633
+        },
+        "TimeOffset": 6.1498896
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015998100000000015,
+        "TimeOffset": 6.1658877
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1527,
+          "Y": 632
+        },
+        "TimeOffset": 6.1658877
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.12853540000000052,
+        "TimeOffset": 6.2944231
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1526,
+          "Y": 632
+        },
+        "Button": "Left",
+        "State": "Down",
+        "TimeOffset": 6.2944231
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.07991529999999969,
+        "TimeOffset": 6.3743384
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1526,
+          "Y": 632
+        },
+        "Button": "Left",
+        "State": "Up",
+        "TimeOffset": 6.3743384
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.5682229999999997,
+        "TimeOffset": 6.9425614
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1524,
+          "Y": 630
+        },
+        "TimeOffset": 6.9425614
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015346200000000643,
+        "TimeOffset": 6.9579076
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1523,
+          "Y": 628
+        },
+        "TimeOffset": 6.9579076
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016072799999999887,
+        "TimeOffset": 6.9739804
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1522,
+          "Y": 626
+        },
+        "TimeOffset": 6.9739804
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007989499999999872,
+        "TimeOffset": 6.9819699
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1520,
+          "Y": 623
+        },
+        "TimeOffset": 6.9819699
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008226500000000136,
+        "TimeOffset": 6.9901964
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1519,
+          "Y": 620
+        },
+        "TimeOffset": 6.9901964
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007887299999999264,
+        "TimeOffset": 6.9980837
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1517,
+          "Y": 617
+        },
+        "TimeOffset": 6.9980837
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007977000000000345,
+        "TimeOffset": 7.0060607
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1514,
+          "Y": 612
+        },
+        "TimeOffset": 7.0060607
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00798050000000039,
+        "TimeOffset": 7.0140412
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1511,
+          "Y": 608
+        },
+        "TimeOffset": 7.0140412
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007786799999999872,
+        "TimeOffset": 7.021828
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1507,
+          "Y": 603
+        },
+        "TimeOffset": 7.021828
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008009699999999675,
+        "TimeOffset": 7.0298377
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1503,
+          "Y": 597
+        },
+        "TimeOffset": 7.0298377
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008082899999999782,
+        "TimeOffset": 7.0379206
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1498,
+          "Y": 591
+        },
+        "TimeOffset": 7.0379206
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008019299999999951,
+        "TimeOffset": 7.0459399
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1493,
+          "Y": 585
+        },
+        "TimeOffset": 7.0459399
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007915400000000794,
+        "TimeOffset": 7.0538553
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1488,
+          "Y": 578
+        },
+        "TimeOffset": 7.0538553
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008064999999999323,
+        "TimeOffset": 7.0619203
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1484,
+          "Y": 572
+        },
+        "TimeOffset": 7.0619203
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008066499999999976,
+        "TimeOffset": 7.0699868
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 566
+        },
+        "TimeOffset": 7.0699868
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007969400000000348,
+        "TimeOffset": 7.0779562
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1475,
+          "Y": 560
+        },
+        "TimeOffset": 7.0779562
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007911599999999908,
+        "TimeOffset": 7.0858678
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1470,
+          "Y": 554
+        },
+        "TimeOffset": 7.0858678
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00798240000000039,
+        "TimeOffset": 7.0938502
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1466,
+          "Y": 547
+        },
+        "TimeOffset": 7.0938502
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007977699999999643,
+        "TimeOffset": 7.1018279
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1460,
+          "Y": 540
+        },
+        "TimeOffset": 7.1018279
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008030899999999619,
+        "TimeOffset": 7.1098588
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1455,
+          "Y": 532
+        },
+        "TimeOffset": 7.1098588
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008120800000000372,
+        "TimeOffset": 7.1179796
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1451,
+          "Y": 525
+        },
+        "TimeOffset": 7.1179796
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007887400000000433,
+        "TimeOffset": 7.125867
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1446,
+          "Y": 518
+        },
+        "TimeOffset": 7.125867
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008094799999999402,
+        "TimeOffset": 7.1339618
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1442,
+          "Y": 510
+        },
+        "TimeOffset": 7.1339618
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007905700000000238,
+        "TimeOffset": 7.1418675
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1437,
+          "Y": 504
+        },
+        "TimeOffset": 7.1418675
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00807290000000016,
+        "TimeOffset": 7.1499404
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1432,
+          "Y": 496
+        },
+        "TimeOffset": 7.1499404
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007956899999999933,
+        "TimeOffset": 7.1578973
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1428,
+          "Y": 488
+        },
+        "TimeOffset": 7.1578973
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0081313999999999,
+        "TimeOffset": 7.1660287
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1424,
+          "Y": 482
+        },
+        "TimeOffset": 7.1660287
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007904599999999817,
+        "TimeOffset": 7.1739333
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1421,
+          "Y": 478
+        },
+        "TimeOffset": 7.1739333
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007943400000000267,
+        "TimeOffset": 7.1818767
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1419,
+          "Y": 474
+        },
+        "TimeOffset": 7.1818767
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008119200000000326,
+        "TimeOffset": 7.1899959
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1416,
+          "Y": 471
+        },
+        "TimeOffset": 7.1899959
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007869399999999693,
+        "TimeOffset": 7.1978653
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1414,
+          "Y": 469
+        },
+        "TimeOffset": 7.1978653
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008143200000000128,
+        "TimeOffset": 7.2060085
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1412,
+          "Y": 466
+        },
+        "TimeOffset": 7.2060085
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008200500000000055,
+        "TimeOffset": 7.214209
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1411,
+          "Y": 464
+        },
+        "TimeOffset": 7.214209
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007676099999999408,
+        "TimeOffset": 7.2218851
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1409,
+          "Y": 462
+        },
+        "TimeOffset": 7.2218851
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008021100000000558,
+        "TimeOffset": 7.2299062
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1408,
+          "Y": 460
+        },
+        "TimeOffset": 7.2299062
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007968199999999648,
+        "TimeOffset": 7.2378744
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1407,
+          "Y": 457
+        },
+        "TimeOffset": 7.2378744
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008100299999999727,
+        "TimeOffset": 7.2459747
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1406,
+          "Y": 455
+        },
+        "TimeOffset": 7.2459747
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015878100000000117,
+        "TimeOffset": 7.2618528
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1405,
+          "Y": 452
+        },
+        "TimeOffset": 7.2618528
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016078600000000165,
+        "TimeOffset": 7.2779314
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1404,
+          "Y": 450
+        },
+        "TimeOffset": 7.2779314
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024087699999999934,
+        "TimeOffset": 7.3020191
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1404,
+          "Y": 448
+        },
+        "TimeOffset": 7.3020191
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015933399999999764,
+        "TimeOffset": 7.3179525
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1403,
+          "Y": 446
+        },
+        "TimeOffset": 7.3179525
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.048239900000000446,
+        "TimeOffset": 7.3661924
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1403,
+          "Y": 445
+        },
+        "Button": "Right",
+        "State": "Down",
+        "TimeOffset": 7.3661924
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.14388359999999967,
+        "TimeOffset": 7.510076
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1403,
+          "Y": 445
+        },
+        "Button": "Right",
+        "State": "Up",
+        "TimeOffset": 7.510076
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.6800037999999997,
+        "TimeOffset": 8.1900798
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1403,
+          "Y": 449
+        },
+        "TimeOffset": 8.1900798
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007798300000001035,
+        "TimeOffset": 8.1978781
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1403,
+          "Y": 456
+        },
+        "TimeOffset": 8.1978781
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008136600000000271,
+        "TimeOffset": 8.2060147
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1405,
+          "Y": 464
+        },
+        "TimeOffset": 8.2060147
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00796029999999881,
+        "TimeOffset": 8.213975
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1407,
+          "Y": 472
+        },
+        "TimeOffset": 8.213975
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008134800000000553,
+        "TimeOffset": 8.2221098
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1409,
+          "Y": 482
+        },
+        "TimeOffset": 8.2221098
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007875199999999083,
+        "TimeOffset": 8.229985
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1412,
+          "Y": 493
+        },
+        "TimeOffset": 8.229985
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007962200000001474,
+        "TimeOffset": 8.2379472
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1414,
+          "Y": 503
+        },
+        "TimeOffset": 8.2379472
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008035800000000037,
+        "TimeOffset": 8.245983
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1416,
+          "Y": 513
+        },
+        "TimeOffset": 8.245983
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00793359999999943,
+        "TimeOffset": 8.2539166
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1418,
+          "Y": 521
+        },
+        "TimeOffset": 8.2539166
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007991699999999824,
+        "TimeOffset": 8.2619083
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1420,
+          "Y": 530
+        },
+        "TimeOffset": 8.2619083
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007959800000000072,
+        "TimeOffset": 8.2698681
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1421,
+          "Y": 538
+        },
+        "TimeOffset": 8.2698681
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008056800000000308,
+        "TimeOffset": 8.2779249
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1423,
+          "Y": 546
+        },
+        "TimeOffset": 8.2779249
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007957599999999232,
+        "TimeOffset": 8.2858825
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1425,
+          "Y": 556
+        },
+        "TimeOffset": 8.2858825
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007995000000001085,
+        "TimeOffset": 8.2938775
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1427,
+          "Y": 566
+        },
+        "TimeOffset": 8.2938775
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008067299999998667,
+        "TimeOffset": 8.3019448
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1431,
+          "Y": 579
+        },
+        "TimeOffset": 8.3019448
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007946099999999845,
+        "TimeOffset": 8.3098909
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1434,
+          "Y": 591
+        },
+        "TimeOffset": 8.3098909
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007973600000001468,
+        "TimeOffset": 8.3178645
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1437,
+          "Y": 603
+        },
+        "TimeOffset": 8.3178645
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008059899999999232,
+        "TimeOffset": 8.3259244
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1441,
+          "Y": 614
+        },
+        "TimeOffset": 8.3259244
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008083100000000343,
+        "TimeOffset": 8.3340075
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1445,
+          "Y": 625
+        },
+        "TimeOffset": 8.3340075
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008116100000000515,
+        "TimeOffset": 8.3421236
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1448,
+          "Y": 635
+        },
+        "TimeOffset": 8.3421236
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007845299999999611,
+        "TimeOffset": 8.3499689
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1452,
+          "Y": 643
+        },
+        "TimeOffset": 8.3499689
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007952299999999468,
+        "TimeOffset": 8.3579212
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1455,
+          "Y": 652
+        },
+        "TimeOffset": 8.3579212
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007962300000000866,
+        "TimeOffset": 8.3658835
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1457,
+          "Y": 660
+        },
+        "TimeOffset": 8.3658835
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00812349999999995,
+        "TimeOffset": 8.374007
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1459,
+          "Y": 667
+        },
+        "TimeOffset": 8.374007
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007850599999999375,
+        "TimeOffset": 8.3818576
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1461,
+          "Y": 674
+        },
+        "TimeOffset": 8.3818576
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008087299999999686,
+        "TimeOffset": 8.3899449
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1463,
+          "Y": 681
+        },
+        "TimeOffset": 8.3899449
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008016800000000046,
+        "TimeOffset": 8.3979617
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1465,
+          "Y": 688
+        },
+        "TimeOffset": 8.3979617
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008042299999999614,
+        "TimeOffset": 8.406004
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1467,
+          "Y": 695
+        },
+        "TimeOffset": 8.406004
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007995300000001038,
+        "TimeOffset": 8.4139993
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1469,
+          "Y": 702
+        },
+        "TimeOffset": 8.4139993
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007929100000000133,
+        "TimeOffset": 8.4219284
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1471,
+          "Y": 709
+        },
+        "TimeOffset": 8.4219284
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008040299999999334,
+        "TimeOffset": 8.4299687
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1473,
+          "Y": 716
+        },
+        "TimeOffset": 8.4299687
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008101899999999773,
+        "TimeOffset": 8.4380706
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1475,
+          "Y": 723
+        },
+        "TimeOffset": 8.4380706
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00790300000000066,
+        "TimeOffset": 8.4459736
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1477,
+          "Y": 730
+        },
+        "TimeOffset": 8.4459736
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007906499999998928,
+        "TimeOffset": 8.4538801
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1478,
+          "Y": 737
+        },
+        "TimeOffset": 8.4538801
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008033900000000926,
+        "TimeOffset": 8.461914
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 744
+        },
+        "TimeOffset": 8.461914
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008017600000000513,
+        "TimeOffset": 8.4699316
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1480,
+          "Y": 749
+        },
+        "TimeOffset": 8.4699316
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0079243999999985,
+        "TimeOffset": 8.477856
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1481,
+          "Y": 755
+        },
+        "TimeOffset": 8.477856
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008044500000000454,
+        "TimeOffset": 8.4859005
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1482,
+          "Y": 761
+        },
+        "TimeOffset": 8.4859005
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007960900000000493,
+        "TimeOffset": 8.4938614
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1482,
+          "Y": 765
+        },
+        "TimeOffset": 8.4938614
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008180599999999316,
+        "TimeOffset": 8.502042
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1483,
+          "Y": 769
+        },
+        "TimeOffset": 8.502042
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007902500000000146,
+        "TimeOffset": 8.5099445
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1483,
+          "Y": 773
+        },
+        "TimeOffset": 8.5099445
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008085400000000575,
+        "TimeOffset": 8.5180299
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1484,
+          "Y": 777
+        },
+        "TimeOffset": 8.5180299
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007961999999999136,
+        "TimeOffset": 8.5259919
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1485,
+          "Y": 781
+        },
+        "TimeOffset": 8.5259919
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007896900000000429,
+        "TimeOffset": 8.5338888
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1486,
+          "Y": 784
+        },
+        "TimeOffset": 8.5338888
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008026900000000836,
+        "TimeOffset": 8.5419157
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1487,
+          "Y": 787
+        },
+        "TimeOffset": 8.5419157
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008092500000000058,
+        "TimeOffset": 8.5500082
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1487,
+          "Y": 790
+        },
+        "TimeOffset": 8.5500082
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007993799999999496,
+        "TimeOffset": 8.558002
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1487,
+          "Y": 794
+        },
+        "TimeOffset": 8.558002
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00791079999999944,
+        "TimeOffset": 8.5659128
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1488,
+          "Y": 798
+        },
+        "TimeOffset": 8.5659128
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008143000000000455,
+        "TimeOffset": 8.5740558
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1488,
+          "Y": 803
+        },
+        "TimeOffset": 8.5740558
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007849800000000684,
+        "TimeOffset": 8.5819056
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 807
+        },
+        "TimeOffset": 8.5819056
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008160000000000167,
+        "TimeOffset": 8.5900656
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 812
+        },
+        "TimeOffset": 8.5900656
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007836899999999147,
+        "TimeOffset": 8.5979025
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 818
+        },
+        "TimeOffset": 8.5979025
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008168599999999415,
+        "TimeOffset": 8.6060711
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 823
+        },
+        "TimeOffset": 8.6060711
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007928700000000788,
+        "TimeOffset": 8.6139998
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 829
+        },
+        "TimeOffset": 8.6139998
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007928399999999058,
+        "TimeOffset": 8.6219282
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 835
+        },
+        "TimeOffset": 8.6219282
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008072600000000207,
+        "TimeOffset": 8.6300008
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 842
+        },
+        "TimeOffset": 8.6300008
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008058400000001242,
+        "TimeOffset": 8.6380592
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 849
+        },
+        "TimeOffset": 8.6380592
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007938799999999802,
+        "TimeOffset": 8.645998
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 857
+        },
+        "TimeOffset": 8.645998
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008040799999999848,
+        "TimeOffset": 8.6540388
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 865
+        },
+        "TimeOffset": 8.6540388
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00797629999999927,
+        "TimeOffset": 8.6620151
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 873
+        },
+        "TimeOffset": 8.6620151
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007905900000000798,
+        "TimeOffset": 8.669921
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 881
+        },
+        "TimeOffset": 8.669921
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007958099999999746,
+        "TimeOffset": 8.6778791
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 889
+        },
+        "TimeOffset": 8.6778791
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008014899999999159,
+        "TimeOffset": 8.685894
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 897
+        },
+        "TimeOffset": 8.685894
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008022500000000932,
+        "TimeOffset": 8.6939165
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 904
+        },
+        "TimeOffset": 8.6939165
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008020300000000091,
+        "TimeOffset": 8.7019368
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 909
+        },
+        "TimeOffset": 8.7019368
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008032399999999384,
+        "TimeOffset": 8.7099692
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 915
+        },
+        "TimeOffset": 8.7099692
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007944500000000687,
+        "TimeOffset": 8.7179137
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 920
+        },
+        "TimeOffset": 8.7179137
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008090799999999732,
+        "TimeOffset": 8.7260045
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 924
+        },
+        "TimeOffset": 8.7260045
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008001399999999492,
+        "TimeOffset": 8.7340059
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 927
+        },
+        "TimeOffset": 8.7340059
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008072999999999553,
+        "TimeOffset": 8.7420789
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 930
+        },
+        "TimeOffset": 8.7420789
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007969300000000956,
+        "TimeOffset": 8.7500482
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 932
+        },
+        "TimeOffset": 8.7500482
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007949699999999282,
+        "TimeOffset": 8.7579979
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 934
+        },
+        "TimeOffset": 8.7579979
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008010099999999909,
+        "TimeOffset": 8.766008
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 937
+        },
+        "TimeOffset": 8.766008
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008005000000000706,
+        "TimeOffset": 8.774013
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 939
+        },
+        "TimeOffset": 8.774013
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007887600000000106,
+        "TimeOffset": 8.7819006
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1489,
+          "Y": 941
+        },
+        "TimeOffset": 8.7819006
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016018100000000146,
+        "TimeOffset": 8.7979187
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1488,
+          "Y": 944
+        },
+        "TimeOffset": 8.7979187
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00814429999999966,
+        "TimeOffset": 8.806063
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1488,
+          "Y": 946
+        },
+        "TimeOffset": 8.806063
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007888599999999357,
+        "TimeOffset": 8.8139516
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1487,
+          "Y": 948
+        },
+        "TimeOffset": 8.8139516
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01605360000000111,
+        "TimeOffset": 8.8300052
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1486,
+          "Y": 951
+        },
+        "TimeOffset": 8.8300052
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007972699999999833,
+        "TimeOffset": 8.8379779
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1485,
+          "Y": 953
+        },
+        "TimeOffset": 8.8379779
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016016999999999726,
+        "TimeOffset": 8.8539949
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1484,
+          "Y": 955
+        },
+        "TimeOffset": 8.8539949
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007913200000000842,
+        "TimeOffset": 8.8619081
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1484,
+          "Y": 957
+        },
+        "TimeOffset": 8.8619081
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024060499999999152,
+        "TimeOffset": 8.8859686
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1483,
+          "Y": 959
+        },
+        "TimeOffset": 8.8859686
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.032169700000000745,
+        "TimeOffset": 8.9181383
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1483,
+          "Y": 961
+        },
+        "TimeOffset": 8.9181383
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.040156800000000104,
+        "TimeOffset": 8.9582951
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1481,
+          "Y": 962
+        },
+        "TimeOffset": 8.9582951
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.1756846999999997,
+        "TimeOffset": 9.1339798
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 960
+        },
+        "TimeOffset": 9.1339798
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.024105699999999786,
+        "TimeOffset": 9.1580855
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 958
+        },
+        "TimeOffset": 9.1580855
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.031909100000000024,
+        "TimeOffset": 9.1899946
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 956
+        },
+        "TimeOffset": 9.1899946
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.040001699999999474,
+        "TimeOffset": 9.2299963
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 954
+        },
+        "TimeOffset": 9.2299963
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.16023910000000008,
+        "TimeOffset": 9.3902354
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 954
+        },
+        "Button": "Left",
+        "State": "Down",
+        "TimeOffset": 9.3902354
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.07189699999999988,
+        "TimeOffset": 9.4621324
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1479,
+          "Y": 954
+        },
+        "Button": "Left",
+        "State": "Up",
+        "TimeOffset": 9.4621324
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.3519173999999996,
+        "TimeOffset": 9.8140498
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1478,
+          "Y": 952
+        },
+        "TimeOffset": 9.8140498
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015923900000000657,
+        "TimeOffset": 9.8299737
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1477,
+          "Y": 950
+        },
+        "TimeOffset": 9.8299737
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016011300000000617,
+        "TimeOffset": 9.845985
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1475,
+          "Y": 947
+        },
+        "TimeOffset": 9.845985
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007951199999999048,
+        "TimeOffset": 9.8539362
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1473,
+          "Y": 944
+        },
+        "TimeOffset": 9.8539362
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008194500000000104,
+        "TimeOffset": 9.8621307
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1472,
+          "Y": 942
+        },
+        "TimeOffset": 9.8621307
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007780699999999641,
+        "TimeOffset": 9.8699114
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1470,
+          "Y": 939
+        },
+        "TimeOffset": 9.8699114
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00806200000000068,
+        "TimeOffset": 9.8779734
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1468,
+          "Y": 936
+        },
+        "TimeOffset": 9.8779734
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008055900000000449,
+        "TimeOffset": 9.8860293
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1467,
+          "Y": 932
+        },
+        "TimeOffset": 9.8860293
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008043499999999426,
+        "TimeOffset": 9.8940728
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1464,
+          "Y": 929
+        },
+        "TimeOffset": 9.8940728
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00792970000000004,
+        "TimeOffset": 9.9020025
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1462,
+          "Y": 925
+        },
+        "TimeOffset": 9.9020025
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008339400000000552,
+        "TimeOffset": 9.9103419
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1459,
+          "Y": 922
+        },
+        "TimeOffset": 9.9103419
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007599400000000145,
+        "TimeOffset": 9.9179413
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1456,
+          "Y": 918
+        },
+        "TimeOffset": 9.9179413
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00814319999999924,
+        "TimeOffset": 9.9260845
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1455,
+          "Y": 915
+        },
+        "TimeOffset": 9.9260845
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007869100000000628,
+        "TimeOffset": 9.9339536
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1452,
+          "Y": 913
+        },
+        "TimeOffset": 9.9339536
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008118200000000186,
+        "TimeOffset": 9.9420718
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1451,
+          "Y": 911
+        },
+        "TimeOffset": 9.9420718
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007889699999999777,
+        "TimeOffset": 9.9499615
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1449,
+          "Y": 908
+        },
+        "TimeOffset": 9.9499615
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080758000000003,
+        "TimeOffset": 9.9580373
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1448,
+          "Y": 906
+        },
+        "TimeOffset": 9.9580373
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007988799999999685,
+        "TimeOffset": 9.9660261
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1446,
+          "Y": 904
+        },
+        "TimeOffset": 9.9660261
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00795439999999914,
+        "TimeOffset": 9.9739805
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1445,
+          "Y": 902
+        },
+        "TimeOffset": 9.9739805
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007993700000000104,
+        "TimeOffset": 9.9819742
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1442,
+          "Y": 898
+        },
+        "TimeOffset": 9.9819742
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008051099999999423,
+        "TimeOffset": 9.9900253
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1441,
+          "Y": 896
+        },
+        "TimeOffset": 9.9900253
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00794870000000003,
+        "TimeOffset": 9.997974
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1438,
+          "Y": 893
+        },
+        "TimeOffset": 9.997974
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080353000000013,
+        "TimeOffset": 10.0060093
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1437,
+          "Y": 890
+        },
+        "TimeOffset": 10.0060093
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007990999999998749,
+        "TimeOffset": 10.0140003
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1435,
+          "Y": 888
+        },
+        "TimeOffset": 10.0140003
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008083400000000296,
+        "TimeOffset": 10.0220837
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1433,
+          "Y": 886
+        },
+        "TimeOffset": 10.0220837
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007836900000000924,
+        "TimeOffset": 10.0299206
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1432,
+          "Y": 884
+        },
+        "TimeOffset": 10.0299206
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008087399999999079,
+        "TimeOffset": 10.038008
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1430,
+          "Y": 881
+        },
+        "TimeOffset": 10.038008
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007939399999999708,
+        "TimeOffset": 10.0459474
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1429,
+          "Y": 879
+        },
+        "TimeOffset": 10.0459474
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008006899999999817,
+        "TimeOffset": 10.0539543
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1428,
+          "Y": 877
+        },
+        "TimeOffset": 10.0539543
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00798750000000048,
+        "TimeOffset": 10.0619418
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1426,
+          "Y": 875
+        },
+        "TimeOffset": 10.0619418
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008180400000000532,
+        "TimeOffset": 10.0701222
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1425,
+          "Y": 873
+        },
+        "TimeOffset": 10.0701222
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007872700000000066,
+        "TimeOffset": 10.0779949
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1423,
+          "Y": 870
+        },
+        "TimeOffset": 10.0779949
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00800409999999907,
+        "TimeOffset": 10.085999
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1422,
+          "Y": 868
+        },
+        "TimeOffset": 10.085999
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008043600000000595,
+        "TimeOffset": 10.0940426
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1420,
+          "Y": 866
+        },
+        "TimeOffset": 10.0940426
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007963000000000164,
+        "TimeOffset": 10.1020056
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1418,
+          "Y": 864
+        },
+        "TimeOffset": 10.1020056
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007988299999999171,
+        "TimeOffset": 10.1099939
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1416,
+          "Y": 860
+        },
+        "TimeOffset": 10.1099939
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008154000000001105,
+        "TimeOffset": 10.1181479
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1413,
+          "Y": 857
+        },
+        "TimeOffset": 10.1181479
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007947099999999097,
+        "TimeOffset": 10.126095
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1410,
+          "Y": 853
+        },
+        "TimeOffset": 10.126095
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00796780000000119,
+        "TimeOffset": 10.1340628
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1407,
+          "Y": 849
+        },
+        "TimeOffset": 10.1340628
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007895800000000008,
+        "TimeOffset": 10.1419586
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1403,
+          "Y": 845
+        },
+        "TimeOffset": 10.1419586
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00809459999999973,
+        "TimeOffset": 10.1500532
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1399,
+          "Y": 840
+        },
+        "TimeOffset": 10.1500532
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00799799999999884,
+        "TimeOffset": 10.1580512
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1394,
+          "Y": 835
+        },
+        "TimeOffset": 10.1580512
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007995800000001552,
+        "TimeOffset": 10.166047
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1389,
+          "Y": 829
+        },
+        "TimeOffset": 10.166047
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008030099999999152,
+        "TimeOffset": 10.1740771
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1384,
+          "Y": 821
+        },
+        "TimeOffset": 10.1740771
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007950600000000918,
+        "TimeOffset": 10.1820277
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1377,
+          "Y": 814
+        },
+        "TimeOffset": 10.1820277
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008061399999998997,
+        "TimeOffset": 10.1900891
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1371,
+          "Y": 807
+        },
+        "TimeOffset": 10.1900891
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00797739999999969,
+        "TimeOffset": 10.1980665
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1363,
+          "Y": 799
+        },
+        "TimeOffset": 10.1980665
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008114000000000843,
+        "TimeOffset": 10.2061805
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1355,
+          "Y": 791
+        },
+        "TimeOffset": 10.2061805
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0077771999999995955,
+        "TimeOffset": 10.2139577
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1346,
+          "Y": 784
+        },
+        "TimeOffset": 10.2139577
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008108099999999396,
+        "TimeOffset": 10.2220658
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1337,
+          "Y": 776
+        },
+        "TimeOffset": 10.2220658
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00787230000000072,
+        "TimeOffset": 10.2299381
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1327,
+          "Y": 768
+        },
+        "TimeOffset": 10.2299381
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008162999999999698,
+        "TimeOffset": 10.2381011
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1317,
+          "Y": 762
+        },
+        "TimeOffset": 10.2381011
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007832300000000458,
+        "TimeOffset": 10.2459334
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1306,
+          "Y": 754
+        },
+        "TimeOffset": 10.2459334
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008098199999999167,
+        "TimeOffset": 10.2540316
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1295,
+          "Y": 746
+        },
+        "TimeOffset": 10.2540316
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0079577000000004,
+        "TimeOffset": 10.2619893
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1282,
+          "Y": 738
+        },
+        "TimeOffset": 10.2619893
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008109100000000424,
+        "TimeOffset": 10.2700984
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1268,
+          "Y": 729
+        },
+        "TimeOffset": 10.2700984
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007876700000000625,
+        "TimeOffset": 10.2779751
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1252,
+          "Y": 720
+        },
+        "TimeOffset": 10.2779751
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0079950999999987,
+        "TimeOffset": 10.2859702
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1236,
+          "Y": 711
+        },
+        "TimeOffset": 10.2859702
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008476899999999787,
+        "TimeOffset": 10.2944471
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1220,
+          "Y": 700
+        },
+        "TimeOffset": 10.2944471
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007514099999999857,
+        "TimeOffset": 10.3019612
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1201,
+          "Y": 688
+        },
+        "TimeOffset": 10.3019612
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008035400000000692,
+        "TimeOffset": 10.3099966
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1180,
+          "Y": 676
+        },
+        "TimeOffset": 10.3099966
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008001800000000614,
+        "TimeOffset": 10.3179984
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1159,
+          "Y": 664
+        },
+        "TimeOffset": 10.3179984
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008036599999998728,
+        "TimeOffset": 10.326035
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1138,
+          "Y": 652
+        },
+        "TimeOffset": 10.326035
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007959600000001288,
+        "TimeOffset": 10.3339946
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1117,
+          "Y": 641
+        },
+        "TimeOffset": 10.3339946
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007945899999999284,
+        "TimeOffset": 10.3419405
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1097,
+          "Y": 633
+        },
+        "TimeOffset": 10.3419405
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008108099999999396,
+        "TimeOffset": 10.3500486
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1077,
+          "Y": 624
+        },
+        "TimeOffset": 10.3500486
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007914600000001215,
+        "TimeOffset": 10.3579632
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1059,
+          "Y": 616
+        },
+        "TimeOffset": 10.3579632
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008116799999999813,
+        "TimeOffset": 10.36608
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1044,
+          "Y": 610
+        },
+        "TimeOffset": 10.36608
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00798439999999978,
+        "TimeOffset": 10.3740644
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1029,
+          "Y": 604
+        },
+        "TimeOffset": 10.3740644
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007999599999999774,
+        "TimeOffset": 10.382064
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1017,
+          "Y": 598
+        },
+        "TimeOffset": 10.382064
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007921899999999482,
+        "TimeOffset": 10.3899859
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1005,
+          "Y": 592
+        },
+        "TimeOffset": 10.3899859
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080758000000003,
+        "TimeOffset": 10.3980617
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 990,
+          "Y": 584
+        },
+        "TimeOffset": 10.3980617
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00796650000000021,
+        "TimeOffset": 10.4060282
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 974,
+          "Y": 574
+        },
+        "TimeOffset": 10.4060282
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007933500000000038,
+        "TimeOffset": 10.4139617
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 958,
+          "Y": 565
+        },
+        "TimeOffset": 10.4139617
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008003999999999678,
+        "TimeOffset": 10.4219657
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 943,
+          "Y": 557
+        },
+        "TimeOffset": 10.4219657
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008015399999999673,
+        "TimeOffset": 10.4299811
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 927,
+          "Y": 550
+        },
+        "TimeOffset": 10.4299811
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008044600000001623,
+        "TimeOffset": 10.4380257
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 912,
+          "Y": 542
+        },
+        "TimeOffset": 10.4380257
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007957099999998718,
+        "TimeOffset": 10.4459828
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 897,
+          "Y": 536
+        },
+        "TimeOffset": 10.4459828
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00800040000000024,
+        "TimeOffset": 10.4539832
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 883,
+          "Y": 531
+        },
+        "TimeOffset": 10.4539832
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007986300000000668,
+        "TimeOffset": 10.4619695
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 871,
+          "Y": 528
+        },
+        "TimeOffset": 10.4619695
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008070800000000489,
+        "TimeOffset": 10.4700403
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 860,
+          "Y": 525
+        },
+        "TimeOffset": 10.4700403
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007979599999998754,
+        "TimeOffset": 10.4780199
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 851,
+          "Y": 523
+        },
+        "TimeOffset": 10.4780199
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007977300000000298,
+        "TimeOffset": 10.4859972
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 846,
+          "Y": 522
+        },
+        "TimeOffset": 10.4859972
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00824090000000055,
+        "TimeOffset": 10.4942381
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 840,
+          "Y": 521
+        },
+        "TimeOffset": 10.4942381
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007787300000000386,
+        "TimeOffset": 10.5020254
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 837,
+          "Y": 520
+        },
+        "TimeOffset": 10.5020254
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008008999999999489,
+        "TimeOffset": 10.5100344
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 835,
+          "Y": 519
+        },
+        "TimeOffset": 10.5100344
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01603019999999944,
+        "TimeOffset": 10.5260646
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 833,
+          "Y": 519
+        },
+        "TimeOffset": 10.5260646
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.19997940000000014,
+        "TimeOffset": 10.726044
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 835,
+          "Y": 521
+        },
+        "TimeOffset": 10.726044
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007955600000000729,
+        "TimeOffset": 10.7339996
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 837,
+          "Y": 523
+        },
+        "TimeOffset": 10.7339996
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007921099999999015,
+        "TimeOffset": 10.7419207
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 839,
+          "Y": 525
+        },
+        "TimeOffset": 10.7419207
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008109600000000938,
+        "TimeOffset": 10.7500303
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 842,
+          "Y": 527
+        },
+        "TimeOffset": 10.7500303
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008049099999999143,
+        "TimeOffset": 10.7580794
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 845,
+          "Y": 529
+        },
+        "TimeOffset": 10.7580794
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007924700000000229,
+        "TimeOffset": 10.7660041
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 849,
+          "Y": 531
+        },
+        "TimeOffset": 10.7660041
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008056700000000916,
+        "TimeOffset": 10.7740608
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 855,
+          "Y": 533
+        },
+        "TimeOffset": 10.7740608
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007914699999998831,
+        "TimeOffset": 10.7819755
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 861,
+          "Y": 535
+        },
+        "TimeOffset": 10.7819755
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00808390000000081,
+        "TimeOffset": 10.7900594
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 869,
+          "Y": 537
+        },
+        "TimeOffset": 10.7900594
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008016699999998878,
+        "TimeOffset": 10.7980761
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 880,
+          "Y": 538
+        },
+        "TimeOffset": 10.7980761
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008036200000001159,
+        "TimeOffset": 10.8061123
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 892,
+          "Y": 539
+        },
+        "TimeOffset": 10.8061123
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007848499999999703,
+        "TimeOffset": 10.8139608
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 905,
+          "Y": 539
+        },
+        "TimeOffset": 10.8139608
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008133700000000132,
+        "TimeOffset": 10.8220945
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 921,
+          "Y": 539
+        },
+        "TimeOffset": 10.8220945
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00785099999999872,
+        "TimeOffset": 10.8299455
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 943,
+          "Y": 539
+        },
+        "TimeOffset": 10.8299455
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008196200000000431,
+        "TimeOffset": 10.8381417
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 968,
+          "Y": 539
+        },
+        "TimeOffset": 10.8381417
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00786730000000091,
+        "TimeOffset": 10.846009
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 994,
+          "Y": 537
+        },
+        "TimeOffset": 10.846009
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007996499999999074,
+        "TimeOffset": 10.8540055
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1021,
+          "Y": 536
+        },
+        "TimeOffset": 10.8540055
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008015000000000327,
+        "TimeOffset": 10.8620205
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1047,
+          "Y": 533
+        },
+        "TimeOffset": 10.8620205
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007968299999999928,
+        "TimeOffset": 10.8699888
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1070,
+          "Y": 530
+        },
+        "TimeOffset": 10.8699888
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008096000000000103,
+        "TimeOffset": 10.8780848
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1091,
+          "Y": 527
+        },
+        "TimeOffset": 10.8780848
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00794680000000092,
+        "TimeOffset": 10.8860316
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1109,
+          "Y": 524
+        },
+        "TimeOffset": 10.8860316
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00805969999999867,
+        "TimeOffset": 10.8940913
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1123,
+          "Y": 523
+        },
+        "TimeOffset": 10.8940913
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00790489999999977,
+        "TimeOffset": 10.9019962
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1137,
+          "Y": 521
+        },
+        "TimeOffset": 10.9019962
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00808480000000067,
+        "TimeOffset": 10.910081
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1150,
+          "Y": 520
+        },
+        "TimeOffset": 10.910081
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00808059999999955,
+        "TimeOffset": 10.9181616
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1161,
+          "Y": 518
+        },
+        "TimeOffset": 10.9181616
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007842899999999986,
+        "TimeOffset": 10.9260045
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1172,
+          "Y": 516
+        },
+        "TimeOffset": 10.9260045
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008035700000000645,
+        "TimeOffset": 10.9340402
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1181,
+          "Y": 514
+        },
+        "TimeOffset": 10.9340402
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00797460000000072,
+        "TimeOffset": 10.9420148
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1188,
+          "Y": 512
+        },
+        "TimeOffset": 10.9420148
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008041099999999801,
+        "TimeOffset": 10.9500559
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1195,
+          "Y": 510
+        },
+        "TimeOffset": 10.9500559
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008004500000000192,
+        "TimeOffset": 10.9580604
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1201,
+          "Y": 509
+        },
+        "TimeOffset": 10.9580604
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007996999999999588,
+        "TimeOffset": 10.9660574
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1205,
+          "Y": 507
+        },
+        "TimeOffset": 10.9660574
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00817099999999904,
+        "TimeOffset": 10.9742284
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1210,
+          "Y": 505
+        },
+        "TimeOffset": 10.9742284
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007730300000000412,
+        "TimeOffset": 10.9819587
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1213,
+          "Y": 503
+        },
+        "TimeOffset": 10.9819587
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008152900000000685,
+        "TimeOffset": 10.9901116
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1217,
+          "Y": 502
+        },
+        "TimeOffset": 10.9901116
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007877799999999269,
+        "TimeOffset": 10.9979894
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1219,
+          "Y": 500
+        },
+        "TimeOffset": 10.9979894
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008149899999999377,
+        "TimeOffset": 11.0061393
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1221,
+          "Y": 499
+        },
+        "TimeOffset": 11.0061393
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007801600000000519,
+        "TimeOffset": 11.0139409
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1224,
+          "Y": 497
+        },
+        "TimeOffset": 11.0139409
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008024000000000697,
+        "TimeOffset": 11.0219649
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1227,
+          "Y": 496
+        },
+        "TimeOffset": 11.0219649
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008069899999998853,
+        "TimeOffset": 11.0300348
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1232,
+          "Y": 494
+        },
+        "TimeOffset": 11.0300348
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008054400000000683,
+        "TimeOffset": 11.0380892
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1238,
+          "Y": 493
+        },
+        "TimeOffset": 11.0380892
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007954800000000262,
+        "TimeOffset": 11.046044
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1245,
+          "Y": 491
+        },
+        "TimeOffset": 11.046044
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00804399999999994,
+        "TimeOffset": 11.054088
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1253,
+          "Y": 488
+        },
+        "TimeOffset": 11.054088
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007874199999999831,
+        "TimeOffset": 11.0619622
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1261,
+          "Y": 486
+        },
+        "TimeOffset": 11.0619622
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00806679999999993,
+        "TimeOffset": 11.070029
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1271,
+          "Y": 484
+        },
+        "TimeOffset": 11.070029
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00830250000000099,
+        "TimeOffset": 11.0783315
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1279,
+          "Y": 481
+        },
+        "TimeOffset": 11.0783315
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007645399999999469,
+        "TimeOffset": 11.0859769
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1288,
+          "Y": 478
+        },
+        "TimeOffset": 11.0859769
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008101099999999306,
+        "TimeOffset": 11.094078
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1296,
+          "Y": 475
+        },
+        "TimeOffset": 11.094078
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00812349999999995,
+        "TimeOffset": 11.1022015
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1303,
+          "Y": 472
+        },
+        "TimeOffset": 11.1022015
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007899400000001222,
+        "TimeOffset": 11.1101009
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1309,
+          "Y": 469
+        },
+        "TimeOffset": 11.1101009
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008000299999999072,
+        "TimeOffset": 11.1181012
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1314,
+          "Y": 467
+        },
+        "TimeOffset": 11.1181012
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008036300000000551,
+        "TimeOffset": 11.1261375
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1317,
+          "Y": 465
+        },
+        "TimeOffset": 11.1261375
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007867599999999086,
+        "TimeOffset": 11.1340051
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1319,
+          "Y": 464
+        },
+        "TimeOffset": 11.1340051
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00803020000000032,
+        "TimeOffset": 11.1420353
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1321,
+          "Y": 462
+        },
+        "TimeOffset": 11.1420353
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01608710000000002,
+        "TimeOffset": 11.1581224
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1323,
+          "Y": 460
+        },
+        "TimeOffset": 11.1581224
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.04802850000000092,
+        "TimeOffset": 11.2061509
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1324,
+          "Y": 458
+        },
+        "TimeOffset": 11.2061509
+      },
+      {
+        "$type": "delay",
+        "Duration": 1.0159436999999993,
+        "TimeOffset": 12.2220946
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1322,
+          "Y": 458
+        },
+        "TimeOffset": 12.2220946
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080171,
+        "TimeOffset": 12.2301117
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1320,
+          "Y": 459
+        },
+        "TimeOffset": 12.2301117
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00798129999999908,
+        "TimeOffset": 12.238093
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1317,
+          "Y": 461
+        },
+        "TimeOffset": 12.238093
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008295600000000292,
+        "TimeOffset": 12.2463886
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1312,
+          "Y": 463
+        },
+        "TimeOffset": 12.2463886
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007652200000000775,
+        "TimeOffset": 12.2540408
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1306,
+          "Y": 466
+        },
+        "TimeOffset": 12.2540408
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00801030000000047,
+        "TimeOffset": 12.2620511
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1300,
+          "Y": 469
+        },
+        "TimeOffset": 12.2620511
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008034399999999664,
+        "TimeOffset": 12.2700855
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1292,
+          "Y": 472
+        },
+        "TimeOffset": 12.2700855
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008155900000000216,
+        "TimeOffset": 12.2782414
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1284,
+          "Y": 475
+        },
+        "TimeOffset": 12.2782414
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007866499999998666,
+        "TimeOffset": 12.2861079
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1275,
+          "Y": 478
+        },
+        "TimeOffset": 12.2861079
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007929000000000741,
+        "TimeOffset": 12.2940369
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1267,
+          "Y": 480
+        },
+        "TimeOffset": 12.2940369
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007991000000000525,
+        "TimeOffset": 12.3020279
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1259,
+          "Y": 483
+        },
+        "TimeOffset": 12.3020279
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008095599999998981,
+        "TimeOffset": 12.3101235
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1250,
+          "Y": 485
+        },
+        "TimeOffset": 12.3101235
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00789289999999987,
+        "TimeOffset": 12.3180164
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1243,
+          "Y": 487
+        },
+        "TimeOffset": 12.3180164
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008221999999999952,
+        "TimeOffset": 12.3262384
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1235,
+          "Y": 489
+        },
+        "TimeOffset": 12.3262384
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0077686000000003474,
+        "TimeOffset": 12.334007
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1227,
+          "Y": 493
+        },
+        "TimeOffset": 12.334007
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008037299999999803,
+        "TimeOffset": 12.3420443
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1218,
+          "Y": 496
+        },
+        "TimeOffset": 12.3420443
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007965099999999836,
+        "TimeOffset": 12.3500094
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1210,
+          "Y": 499
+        },
+        "TimeOffset": 12.3500094
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008093099999999964,
+        "TimeOffset": 12.3581025
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1200,
+          "Y": 502
+        },
+        "TimeOffset": 12.3581025
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00795360000000045,
+        "TimeOffset": 12.3660561
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1190,
+          "Y": 506
+        },
+        "TimeOffset": 12.3660561
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008030400000000881,
+        "TimeOffset": 12.3740865
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1181,
+          "Y": 511
+        },
+        "TimeOffset": 12.3740865
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007904399999999256,
+        "TimeOffset": 12.3819909
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1172,
+          "Y": 515
+        },
+        "TimeOffset": 12.3819909
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008129699999999573,
+        "TimeOffset": 12.3901206
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1164,
+          "Y": 519
+        },
+        "TimeOffset": 12.3901206
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00787210000000016,
+        "TimeOffset": 12.3979927
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1155,
+          "Y": 523
+        },
+        "TimeOffset": 12.3979927
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008184500000000483,
+        "TimeOffset": 12.4061772
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1147,
+          "Y": 528
+        },
+        "TimeOffset": 12.4061772
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007928399999999058,
+        "TimeOffset": 12.4141056
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1138,
+          "Y": 532
+        },
+        "TimeOffset": 12.4141056
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007923200000000463,
+        "TimeOffset": 12.4220288
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1130,
+          "Y": 536
+        },
+        "TimeOffset": 12.4220288
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00810560000000038,
+        "TimeOffset": 12.4301344
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1122,
+          "Y": 540
+        },
+        "TimeOffset": 12.4301344
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007956899999999933,
+        "TimeOffset": 12.4380913
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1115,
+          "Y": 545
+        },
+        "TimeOffset": 12.4380913
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008062300000000633,
+        "TimeOffset": 12.4461536
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1108,
+          "Y": 548
+        },
+        "TimeOffset": 12.4461536
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00792090000000023,
+        "TimeOffset": 12.4540745
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1101,
+          "Y": 551
+        },
+        "TimeOffset": 12.4540745
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008124699999999763,
+        "TimeOffset": 12.4621992
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1095,
+          "Y": 554
+        },
+        "TimeOffset": 12.4621992
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007851199999999281,
+        "TimeOffset": 12.4700504
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1090,
+          "Y": 556
+        },
+        "TimeOffset": 12.4700504
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008159300000000869,
+        "TimeOffset": 12.4782097
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1086,
+          "Y": 558
+        },
+        "TimeOffset": 12.4782097
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007927799999999152,
+        "TimeOffset": 12.4861375
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1083,
+          "Y": 560
+        },
+        "TimeOffset": 12.4861375
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00799040000000062,
+        "TimeOffset": 12.4941279
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1081,
+          "Y": 560
+        },
+        "TimeOffset": 12.4941279
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016013799999999634,
+        "TimeOffset": 12.5101417
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1079,
+          "Y": 562
+        },
+        "TimeOffset": 12.5101417
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.16002250000000018,
+        "TimeOffset": 12.6701642
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1076,
+          "Y": 563
+        },
+        "TimeOffset": 12.6701642
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01599539999999955,
+        "TimeOffset": 12.6861596
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1074,
+          "Y": 565
+        },
+        "TimeOffset": 12.6861596
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007971200000000067,
+        "TimeOffset": 12.6941308
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1072,
+          "Y": 565
+        },
+        "TimeOffset": 12.6941308
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007996800000000803,
+        "TimeOffset": 12.7021276
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1070,
+          "Y": 566
+        },
+        "TimeOffset": 12.7021276
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007916799999998503,
+        "TimeOffset": 12.7100444
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1068,
+          "Y": 567
+        },
+        "TimeOffset": 12.7100444
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008104799999999912,
+        "TimeOffset": 12.7181492
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1065,
+          "Y": 569
+        },
+        "TimeOffset": 12.7181492
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008017600000000513,
+        "TimeOffset": 12.7261668
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1061,
+          "Y": 570
+        },
+        "TimeOffset": 12.7261668
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00785040000000059,
+        "TimeOffset": 12.7340172
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1058,
+          "Y": 572
+        },
+        "TimeOffset": 12.7340172
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0080448999999998,
+        "TimeOffset": 12.7420621
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1053,
+          "Y": 575
+        },
+        "TimeOffset": 12.7420621
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008015900000000187,
+        "TimeOffset": 12.750078
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1049,
+          "Y": 577
+        },
+        "TimeOffset": 12.750078
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008020600000000044,
+        "TimeOffset": 12.7580986
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1044,
+          "Y": 580
+        },
+        "TimeOffset": 12.7580986
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007927399999999807,
+        "TimeOffset": 12.766026
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1041,
+          "Y": 583
+        },
+        "TimeOffset": 12.766026
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008143600000000362,
+        "TimeOffset": 12.7741696
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1036,
+          "Y": 585
+        },
+        "TimeOffset": 12.7741696
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00788779999999889,
+        "TimeOffset": 12.7820574
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1033,
+          "Y": 587
+        },
+        "TimeOffset": 12.7820574
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00808300000000095,
+        "TimeOffset": 12.7901404
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1028,
+          "Y": 589
+        },
+        "TimeOffset": 12.7901404
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007941900000000501,
+        "TimeOffset": 12.7980823
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1025,
+          "Y": 591
+        },
+        "TimeOffset": 12.7980823
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00800389999999851,
+        "TimeOffset": 12.8060862
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1022,
+          "Y": 592
+        },
+        "TimeOffset": 12.8060862
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008050600000000685,
+        "TimeOffset": 12.8141368
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1019,
+          "Y": 593
+        },
+        "TimeOffset": 12.8141368
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007889600000000385,
+        "TimeOffset": 12.8220264
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1018,
+          "Y": 595
+        },
+        "TimeOffset": 12.8220264
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01606020000000008,
+        "TimeOffset": 12.8380866
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1016,
+          "Y": 596
+        },
+        "TimeOffset": 12.8380866
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.13636859999999906,
+        "TimeOffset": 12.9744552
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1015,
+          "Y": 596
+        },
+        "Button": "Left",
+        "State": "Down",
+        "TimeOffset": 12.9744552
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0639277000000007,
+        "TimeOffset": 13.0383829
+      },
+      {
+        "$type": "click",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1015,
+          "Y": 596
+        },
+        "Button": "Left",
+        "State": "Up",
+        "TimeOffset": 13.0383829
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.21566250000000053,
+        "TimeOffset": 13.2540454
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1019,
+          "Y": 596
+        },
+        "TimeOffset": 13.2540454
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007972699999999833,
+        "TimeOffset": 13.2620181
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1023,
+          "Y": 596
+        },
+        "TimeOffset": 13.2620181
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008100999999999914,
+        "TimeOffset": 13.2701191
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1028,
+          "Y": 596
+        },
+        "TimeOffset": 13.2701191
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008063199999998716,
+        "TimeOffset": 13.2781823
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1033,
+          "Y": 594
+        },
+        "TimeOffset": 13.2781823
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008073300000001282,
+        "TimeOffset": 13.2862556
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1042,
+          "Y": 592
+        },
+        "TimeOffset": 13.2862556
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007890399999999076,
+        "TimeOffset": 13.294146
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1050,
+          "Y": 590
+        },
+        "TimeOffset": 13.294146
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007917300000000793,
+        "TimeOffset": 13.3020633
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1058,
+          "Y": 587
+        },
+        "TimeOffset": 13.3020633
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008059599999999278,
+        "TimeOffset": 13.3101229
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1067,
+          "Y": 585
+        },
+        "TimeOffset": 13.3101229
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007989999999999498,
+        "TimeOffset": 13.3181129
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1076,
+          "Y": 581
+        },
+        "TimeOffset": 13.3181129
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008068000000001518,
+        "TimeOffset": 13.3261809
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1085,
+          "Y": 578
+        },
+        "TimeOffset": 13.3261809
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007871899999999599,
+        "TimeOffset": 13.3340528
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1093,
+          "Y": 575
+        },
+        "TimeOffset": 13.3340528
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00799029999999945,
+        "TimeOffset": 13.3420431
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1102,
+          "Y": 572
+        },
+        "TimeOffset": 13.3420431
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008049400000000873,
+        "TimeOffset": 13.3500925
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1110,
+          "Y": 569
+        },
+        "TimeOffset": 13.3500925
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007972299999998711,
+        "TimeOffset": 13.3580648
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1117,
+          "Y": 565
+        },
+        "TimeOffset": 13.3580648
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008139600000001579,
+        "TimeOffset": 13.3662044
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1126,
+          "Y": 562
+        },
+        "TimeOffset": 13.3662044
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007867499999999694,
+        "TimeOffset": 13.3740719
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1134,
+          "Y": 557
+        },
+        "TimeOffset": 13.3740719
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007997599999999494,
+        "TimeOffset": 13.3820695
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1142,
+          "Y": 554
+        },
+        "TimeOffset": 13.3820695
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008023700000000744,
+        "TimeOffset": 13.3900932
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1151,
+          "Y": 551
+        },
+        "TimeOffset": 13.3900932
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008121399999998502,
+        "TimeOffset": 13.3982146
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1159,
+          "Y": 548
+        },
+        "TimeOffset": 13.3982146
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.0081187000000007,
+        "TimeOffset": 13.4063333
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1166,
+          "Y": 545
+        },
+        "TimeOffset": 13.4063333
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007868000000000208,
+        "TimeOffset": 13.4142013
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1174,
+          "Y": 542
+        },
+        "TimeOffset": 13.4142013
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00790890000000033,
+        "TimeOffset": 13.4221102
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1179,
+          "Y": 539
+        },
+        "TimeOffset": 13.4221102
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008107400000000098,
+        "TimeOffset": 13.4302176
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1184,
+          "Y": 537
+        },
+        "TimeOffset": 13.4302176
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007974899999998897,
+        "TimeOffset": 13.4381925
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1188,
+          "Y": 535
+        },
+        "TimeOffset": 13.4381925
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008006800000000425,
+        "TimeOffset": 13.4461993
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1192,
+          "Y": 533
+        },
+        "TimeOffset": 13.4461993
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007877199999999362,
+        "TimeOffset": 13.4540765
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1195,
+          "Y": 531
+        },
+        "TimeOffset": 13.4540765
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007990799999999965,
+        "TimeOffset": 13.4620673
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1199,
+          "Y": 529
+        },
+        "TimeOffset": 13.4620673
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007992900000001413,
+        "TimeOffset": 13.4700602
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1201,
+          "Y": 528
+        },
+        "TimeOffset": 13.4700602
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.00822669999999981,
+        "TimeOffset": 13.4782869
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1203,
+          "Y": 526
+        },
+        "TimeOffset": 13.4782869
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007849199999999001,
+        "TimeOffset": 13.4861361
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1205,
+          "Y": 525
+        },
+        "TimeOffset": 13.4861361
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008043900000000548,
+        "TimeOffset": 13.49418
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1207,
+          "Y": 524
+        },
+        "TimeOffset": 13.49418
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007884699999999967,
+        "TimeOffset": 13.5020647
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1209,
+          "Y": 523
+        },
+        "TimeOffset": 13.5020647
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.015972700000000728,
+        "TimeOffset": 13.5180374
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1212,
+          "Y": 521
+        },
+        "TimeOffset": 13.5180374
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.016013799999999634,
+        "TimeOffset": 13.5340512
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1215,
+          "Y": 519
+        },
+        "TimeOffset": 13.5340512
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.008008600000000143,
+        "TimeOffset": 13.5420598
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1217,
+          "Y": 518
+        },
+        "TimeOffset": 13.5420598
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.01606209999999919,
+        "TimeOffset": 13.5581219
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1219,
+          "Y": 517
+        },
+        "TimeOffset": 13.5581219
+      },
+      {
+        "$type": "delay",
+        "Duration": 0.007952500000000029,
+        "TimeOffset": 13.5660744
+      },
+      {
+        "$type": "move",
+        "Position": {
+          "IsEmpty": false,
+          "X": 1221,
+          "Y": 516
+        },
+        "TimeOffset": 13.5660744
+      }
+    ],
+    "ScheduleMode": 2,
+    "ScheduledTime": "2025-08-27T23:56:15.3734625+02:00",
+    "ScheduledEndTime": "2025-08-27T23:56:15.3734643+02:00",
+    "LoopCount": 1,
+    "InfiniteLoop": false,
+    "SpeedFactor": 1,
+    "IsEnabled": true,
+    "RepeatDaily": false
+  }
+]
